@@ -16,8 +16,19 @@ symbols = [chr(x) for x in [33, 35, 36, 37, 38, 40, 41, 42, 43]] #converting asc
 print("👇");
 
 
+logo = """
+ ____                                                      __      ____                                          __                   
+/\  _`\                                                   /\ \    /\  _`\                                       /\ \__                
+\ \ \L\ \ __      ____    ____  __  __  __    ___   _ __  \_\ \   \ \ \L\_\     __    ___      __   _ __    __  \ \ ,_\   ___   _ ____  
+ \ \ ,__/'__`\   /',__\  /',__\/\ \/\ \/\ \  / __`\/\`'__\/'_` \   \ \ \L_L   /'__`\/' _ `\  /'__`\/\`'__\/'__`\ \ \ \/  / __`\/\`'__\_
+  \ \ \/\ \L\.\_/\__, `\/\__, `\ \ \_/ \_/ \/\ \L\ \ \ \//\ \L\ \   \ \ \/, \/\  __//\ \/\ \/\  __/\ \ \//\ \L\.\_\ \ \_/\ \L\ \ \ \/ 
+   \ \_\ \__/.\_\/\____/\/\____/\ \___x___/'\ \____/\ \_\\ \___,_\   \ \____/\ \____\ \_\ \_\ \____\\ \_\\ \__/.\_\\ \__\ \____/\ \_\ 
+    \/_/\/__/\/_/\/___/  \/___/  \/__//__/   \/___/  \/_/ \/__,_ /    \/___/  \/____/\/_/\/_/\/____/ \/_/ \/__/\/_/ \/__/\/___/  \/_/                                                                                                    
+
+"""
 
 def random_password_generator(letters, numbers, symbols, nr_letters,nr_symbols, nr_numbers):
+ 
   password = ""; #my empty password variable that i'd be working with later
 
   loop_time = nr_letters+nr_numbers+nr_symbols; #calculating the final loop time for all the character to be produced.
@@ -38,7 +49,7 @@ def random_password_generator(letters, numbers, symbols, nr_letters,nr_symbols, 
 
 
 def main():
-    print("Welcome to the PyPassword Generator!")
+    print(logo);
     nr_letters= int(input("How many letters would you like in your password?\n")) 
     nr_symbols = int(input(f"How many symbols would you like?\n"))
     nr_numbers = int(input(f"How many numbers would you like?\n"))
