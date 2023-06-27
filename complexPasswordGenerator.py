@@ -27,6 +27,7 @@ logo = """
 
 """
 
+#POSSIBLE ADD_ON: ask user if they want to save their password to an excel sheet, with 4 table heads, one for the Date added, Purpose, Username, Password.
 def random_password_generator(letters, numbers, symbols, nr_letters,nr_symbols, nr_numbers):
  
   password = ""; #my empty password variable that i'd be working with later
@@ -44,7 +45,7 @@ def random_password_generator(letters, numbers, symbols, nr_letters,nr_symbols, 
       choice = r.randint(1,len(options)); #getting a random choice from the dictionary
       
       password += options[choice]; #appending the choice to the password variable
-  print(f" 🔐: \"{password}\" ");#self explanatory
+  print(f"\t\t🔐: \"{password}\" ");#self explanatory
   pass;
 
 
