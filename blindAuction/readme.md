@@ -2,6 +2,16 @@
 
 # Game Application
 
+## Demo
+### Start of the game
+<img width="490" alt="Screenshot 2023-07-06 164621" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/20202847-f1e8-4835-bdd3-5a7b004d5593">
+
+
+### End of the game
+<img width="550" alt="Screenshot 2023-07-06 164751" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/933f0c68-116a-4766-8b08-0afdef6fd33c">
+
+
+
 ## Description
 This is a game application where players can enter their names and place bids. The application determines the winner based on the highest bid.
 
@@ -18,8 +28,6 @@ This is a game application where players can enter their names and place bids. T
 5. Decide whether to keep playing or stop.
 6. The application will display the winner with the highest bid.
 
-## Screenshots
-Include any relevant screenshots or GIFs of the application in this section.
 
 ```python
 import dependencies as extrnl
