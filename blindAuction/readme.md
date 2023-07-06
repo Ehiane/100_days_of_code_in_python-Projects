@@ -1,6 +1,6 @@
 
 
-# Game Application
+# BlindAuction
 
 ## Demo
 ### Start of the game
