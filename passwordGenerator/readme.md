@@ -1,10 +1,13 @@
 # Random Password Generator
 
+## Demo
+<img width="559" alt="image" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/fc4bd0c7-be6b-47ab-a6c9-d47930397057">
+
 This Python program generates a random password based on user-specified criteria. The generated password includes a combination of letters, symbols, and numbers.
 
 ## Requirements
 
-To run this program, make sure you have Python 3.x installed on your system.
+To run this program, make sure you have Python 3. {...} installed on your system.
 
 ## Getting Started
 
