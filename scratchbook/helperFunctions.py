@@ -212,6 +212,3 @@ def caesar(start_text, shift_amount, cipher_direction):
 #Try running the program and entering a shift number of 45.
 #Add some code so that the program continues to work even if the user enters a shift number greater than 26.
 #Hint: Think about how you can use the modulus (%).
-
-
-            
