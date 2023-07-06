@@ -1,5 +1,9 @@
 # Text-based Calculator
 
+## Demo
+<img width="575" alt="image" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/ee7da3f5-61d4-42df-aac1-8df2911310ac">
+
+
 This is a simple text-based calculator implemented in Python. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
 ## Usage
