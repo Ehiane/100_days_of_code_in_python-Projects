@@ -1,5 +1,39 @@
 import helperFunctions as Help
 
+
+#calculator essentials:
+
+
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):
+    return n1 * n2
+
+
+def divide(n1, n2):
+    return n1 / n2
+
+
+#create a dictionary to hold all these operations
+
+##possible through mapping the functions signature .
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+}
+
+do = operations["+"]
+do(2, 3)
+
+
 def main():
   # age = input("What is you current age? ");
   # [days_remaining, weeks_remaining,months_remaing] = calcAgeto90(age);
@@ -51,23 +85,26 @@ def main():
     # caesar(start_text=text, shift_amount=shift, cipher_direction=direction);
 
     # to wipe an existing dictionary you can just set it to {} and it'll automatically wipe it. 
-    travel_log = {
-        "Nigeria": {"Visited States": ["Edo", "PortHarcourt","Lagos", "Ogun", "Ibadan"], "Homes": ["Lagos","PortHarcourt","Edo"]},
-        "United States": {"Visited States": ["California","Indianapolis", "Washington", "Washington DC", "Pennsylvania", "Maryland"], "Homes":["Washington", "Maryland","Pennsylvania", "Indianapolis"]}
-    };
+    # travel_log = {
+    #     "Nigeria": {"Visited States": ["Edo", "PortHarcourt","Lagos", "Ogun", "Ibadan"], "Homes": ["Lagos","PortHarcourt","Edo"]},
+    #     "United States": {"Visited States": ["California","Indianapolis", "Washington", "Washington DC", "Pennsylvania", "Maryland"], "Homes":["Washington", "Maryland","Pennsylvania", "Indianapolis"]}
+    # };
     
-    def printNestedDictList(dictionary, indent=0):
-        """
-        prints out a nested dictionary, where the values of the nested dictionary is a list.
-        """
-        if(isinstance(dictionary, dict)):
-            for key, value in dictionary.items():
-                    print(f"{ ' '*indent}{key}:");
-                    printNestedDictList(value, indent + 4);
+    # def printNestedDictList(dictionary, indent=0):
+    #     """
+    #     prints out a nested dictionary, where the values of the nested dictionary is a list.
+    #     """
+    #     if(isinstance(dictionary, dict)):
+    #         for key, value in dictionary.items():
+    #                 print(f"{ ' '*indent}{key}:");
+    #                 printNestedDictList(value, indent + 4);
         
-        elif(isinstance(dictionary, list)):
-            print(f"{' ' * indent}: {', '.join(dictionary)}");
+    #     elif(isinstance(dictionary, list)):
+    #         print(f"{' ' * indent}: {', '.join(dictionary)}");
 
-    printNestedDictList(travel_log);
+    # printNestedDictList(travel_log);
+
+    
+    pass;
 
 main();

@@ -14,6 +14,7 @@ import random as r
 
 import math as m
 
+bug = "🐞";
 
 alphabet = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
