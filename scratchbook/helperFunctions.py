@@ -22,6 +22,8 @@ alphabet = [
     't', 'u', 'v', 'w', 'x', 'y', 'z'
 ]
 
+max_shift = len(alphabet)
+
 
 def calcAgeto90(currentAge):
     """
