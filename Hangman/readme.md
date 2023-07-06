@@ -5,6 +5,7 @@
 
 This is a Python program that implements the classic game of Hangman. The objective of the game is to guess a secret word by guessing individual letters. The player has a limited number of attempts to guess the word correctly before losing the game.
 
+
 ## Requirements
 
 To run this program, make sure you have the following:
