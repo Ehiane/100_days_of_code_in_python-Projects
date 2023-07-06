@@ -1,5 +1,8 @@
 # Hangman Game
 
+## Demo
+<img width="499" alt="Screenshot 2023-06-23 233530" src="https://github.com/Ehiane/advanced_rock_paper_scissors/assets/79903725/40d27150-1cc2-4d50-bfdc-b0893ab49aee">
+
 This is a Python program that implements the classic game of Hangman. The objective of the game is to guess a secret word by guessing individual letters. The player has a limited number of attempts to guess the word correctly before losing the game.
 
 ## Requirements
