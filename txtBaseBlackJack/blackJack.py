@@ -1,15 +1,7 @@
 #######-----[ 🧢🪨: Black Jack]-----########
 
-## TODO instead of hard coding list, use [LIST COMPREHENSION] --Done
-## TODO use a dictionary to hold the values of the non numericals. --Done
-## TODO create a print rules function and ask user if they want to view it at the start of the game.
-
 #Import(s):
 from resources import welcome_screen, start_pause, create_deck_of_cards, print_rules, stage1, stage2, User_score, User_deck, Computer_score,Computer_deck;
-
-
-
-
 
 def initialize_game():
     welcome_screen()
