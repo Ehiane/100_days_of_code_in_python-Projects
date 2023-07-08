@@ -18,7 +18,7 @@ The Number Guessing Game is a simple Python project where the player tries to gu
 ### Installation
 1. Clone the repository:
    ```shell
-   git clone https://github.com/your-username/number-guessing-game.git
+    git clone https://github.com/Ehiane/100_days_of_code_in_python-Projects/numberGuesser.git
    ```
 2. Navigate to the project directory:
    ```shell
