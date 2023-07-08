@@ -1,5 +1,13 @@
 # 🔢🎰Number guesser
 
+## Demo
+<img width="274" alt="Screenshot 2023-07-08 105812" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/edfb9759-5f7e-4dd7-a77f-fe3d454d5448">
+
+<img width="254" alt="Screenshot 2023-07-08 105843" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/27b652ab-531f-4ab8-b660-39a7f1b02396">
+
+<img width="408" alt="Screenshot 2023-07-08 105853" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/ea3408be-42ce-4b4f-a209-214ad6f885fb">
+
+
 ## Overview
 The Number Guessing Game is a simple Python project where the player tries to guess a target number within a certain range. The game provides feedback on each guess and allows the player to play again.
 
