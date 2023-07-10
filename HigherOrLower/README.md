@@ -4,6 +4,7 @@ This is a Python program called "Higher or Lower" that allows users to play a gu
 
 ## How to Play
 
+
 1. Run the `source_code.py` file to start the game.
 2. You will be presented with two celebrities and their information.
 3. Guess which celebrity has more followers by entering the corresponding number (1 or 2).
