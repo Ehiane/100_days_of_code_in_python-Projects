@@ -1,6 +1,9 @@
-#  ☕🤖| Coffee Machine Software
+# ☕🤖| Coffee Machine Software
 
 This repository contains the source code for a coffee machine software. The software allows users to interact with the coffee machine, make various types of coffee, check resources, process payments, and generate reports.
+
+## Demo
+![bean-haven demo gif](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/5c0a02e9-bc82-47d0-a652-67deb7f96fe7)
 
 ## Program Requirements
 
