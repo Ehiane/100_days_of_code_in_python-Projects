@@ -1,6 +1,4 @@
-
-![0660efe82fa3da42ed56eef013171835](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/dce793e9-3429-4bfe-bbf4-27bc5bfbca67)
-
+![giphy](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/fd7d845b-9b85-48a5-9378-e17fa29d498e)
 
 
 
