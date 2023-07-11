@@ -1,3 +1,9 @@
+
+![0660efe82fa3da42ed56eef013171835](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/dce793e9-3429-4bfe-bbf4-27bc5bfbca67)
+
+
+
+
 # [ 🔗: 100_days_of_code_in_python-Projects](https://github.com/Ehiane/100_days_of_code_in_python-Projects/tree/main)
 
 Welcome to my repository for the projects completed during my "100 Days of Code in Python" course. These projects showcase my progress and mastery of Python programming concepts. 
