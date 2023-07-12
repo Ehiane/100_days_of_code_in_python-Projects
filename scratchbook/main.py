@@ -1,37 +1,81 @@
 import helperFunctions as Help
+from turtle import Turtle, Screen
+from prettytable import PrettyTable
+
+
+
+## TURTLE CLASS
+#making use of Turtle class and saving it to an object
+# timmy_turtle = Turtle()
+
+# #changing the shape
+# print(timmy_turtle);
+# timmy_turtle.shape("turtle")
+
+# my_screen = Screen(); 
+# print(my_screen.canvheight);
+
+
+# #coloring the turtle
+# timmy_turtle.fillcolor("cyan");
+
+# #moving the position of the turtle.
+# timmy_turtle.forward(100);
+
+
+# my_screen.exitonclick();
+
+
+# #Pretty Table class
+table = PrettyTable();
+
+# table.field_names = ["Name", "Club", "Position", "Nationality", "Number"];
+# table.add_rows( [
+#     ["Jude Bellingham", "Real-Madrid", "CM", "England", "22" ],
+#     ["Bukayo Saka", "Arsenal", "RW", "England", "7"],
+# ])
+# table.add_row(["","","","",""],divider=True);
+# table.add_row(["Moussa Diaby", "Bayer-04", "RW", "France", "19" ]);
+# table.add_row(["Kylian Mbappe", "Paris-Saint-German(PSG)", "ST","France", "7"]);
+
+#challenge
+table.add_column("Pokemon Name",["Pikachu","Squirtle","Charamander"], align="l");
+table.add_column("Type",["Electric", "Water", "Fire"], align="l");
+
+print(table);
 
 
 #calculator essentials:
 
 
-def add(n1, n2):
-    return n1 + n2
+# def add(n1, n2):
+#     return n1 + n2
 
 
-def subtract(n1, n2):
-    return n1 - n2
+# def subtract(n1, n2):
+#     return n1 - n2
 
 
-def multiply(n1, n2):
-    return n1 * n2
+# def multiply(n1, n2):
+#     return n1 * n2
 
 
-def divide(n1, n2):
-    return n1 / n2
+# def divide(n1, n2):
+#     return n1 / n2
 
 
-#create a dictionary to hold all these operations
+# #create a dictionary to hold all these operations
 
-##possible through mapping the functions signature .
-operations = {
-    "+": add,
-    "-": subtract,
-    "*": multiply,
-    "/": divide,
-}
+# ##possible through mapping the functions signature .
+# operations = {
+#     "+": add,
+#     "-": subtract,
+#     "*": multiply,
+#     "/": divide,
+# }
 
-do = operations["+"]
-do(2, 3)
+# do = operations["+"]
+# do(2, 3)
 
 
 def main():
