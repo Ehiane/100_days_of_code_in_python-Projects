@@ -1,4 +1,8 @@
-# OOP Quiz Game
+# ❓🤔 💯|OOP Quiz Game
+
+## Demo
+<img width="535" alt="image" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/92c5545d-33a6-4126-acfa-c907d449f5de">
+
 
 This project is a simple quiz application that tests your knowledge with a set of True/False questions. The program presents each question one by one, allows you to answer, and provides feedback on whether your answer was correct or incorrect. At the end of the quiz, it displays your final score.
 
