@@ -7,31 +7,38 @@
 Welcome to my repository for the projects completed during my "100 Days of Code in Python" course. These projects showcase my progress and mastery of Python programming concepts. 
 
 **[ 🪨🗒️✂️ |Day 4: Rock-Paper-Scissors](https://github.com/Ehiane/100_days_of_code_in_python-Projects/tree/main/RPS)**
-- Developed a graphical version of the classic game "Rock-Paper-Scissors" using Python, incorporating the random module to generate computer moves.
+> Developed a graphical version of the classic game "Rock-Paper-Scissors" using Python, incorporating the random module to generate computer moves.
 
 **[ 🤐🔒🎰 |Day 5: Password-Generator](passwordGenerator)**
-- Implemented a password generator that utilizes the range function to customize the length and complexity of generated passwords.
+> Implemented a password generator that utilizes the range function to customize the length and complexity of generated passwords.
 
 **[🎮✏️🪢 |Day 7: Hangman](Hangman)**
-- Created a text-based version of the game "Hangman," focusing on flowchart design and string manipulation techniques.
+> Created a text-based version of the game "Hangman," focusing on flowchart design and string manipulation techniques.
 
 **[👨🏿‍💼💼💰 |Day 9: Blind-Auction](blindAuction)**
-- Built a blind auction program using dictionaries and functions, enabling participants to place bids and determine the highest bidder.
+> Built a blind auction program using dictionaries and functions, enabling participants to place bids and determine the highest bidder.
 
 **[⌨️🧮 ➗ |Day 10: txtBasedCalc](txtBasedCalc)**
-- Developed a text-based calculator application that incorporates functions with outputs, loops, and informative docstrings.
+> Developed a text-based calculator application that incorporates functions with outputs, loops, and informative docstrings.
 
 **[Day 11 (🧢🪨| Capstone): txtBasedBlackJack](txtBaseBlackJack)**
-- Designed a text-based version of the popular card game "Blackjack," employing loops, functions, dictionaries, and the range function to simulate gameplay.
+> Designed a text-based version of the popular card game "Blackjack," employing loops, functions, dictionaries, and the range function to simulate gameplay.
 
 **[🔢🗣️🎮 |Day 12: numberGuesser](numberGuesser)**
-- Implemented a number guessing game that utilizes global variables and challenges players to guess a randomly generated number.
+> Implemented a number guessing game that utilizes global variables and challenges players to guess a randomly generated number.
 
 **[🆙⏬ ↕️ |Day 14: Higher-or-Lower](HigherOrLower)**
-- Created a game that challenges players to guess a secret number while providing debugging functionalities for a seamless gaming experience.
+> Created a game that challenges players to guess a secret number while providing debugging functionalities for a seamless gaming experience.
 
-**[☕🤖 🖥️|Day 15: coffee-Machine-Software](coffeeMachineSoftware)**
-- Developed a software solution for a coffee machine, focusing on the mechanics of Visual Studio Code (vsCode) and creating an intuitive terminal-based user interface.
+**[☕🤖 🖥️|Day 16: coffee-Machine-Software](coffeeMachineSoftware)**
+> Developed a software solution for a coffee machine, focusing on the mechanics of Visual Studio Code (vsCode) and creating an intuitive terminal-based user interface.
+
+**[☕🤖 OOP|Day 15: oop-coffee-Machine-Software](oop_coffeeMachineSoftware)**
+> very similar to Day 16, just in an OOP manner.
+
+**[❓🤔 💯|Day 17: OOP Quiz Game](oop_quizGame)**
+> Built an Object-Oriented Quiz Game utilizing an external API to provide dynamic and engaging True/False questions for an interactive user experience.
+
 
 ## Credits
 
