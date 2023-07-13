@@ -48,19 +48,19 @@ Modify the `question_data` list in `data.py` to add, remove, or modify the quiz 
 
 ### `main.py`
 
-This file is the entry point of the application. It imports the necessary modules (`data`, `question_model`, and `quiz_brain`) and sets up the quiz. It creates a list of question objects, initializes a `QuizBrain` object, and starts the quiz loop. After the quiz ends, it displays the final score.
+> This file is the entry point of the application. It imports the necessary modules (`data`, `question_model`, and `quiz_brain`) and sets up the quiz. It creates a list of question objects, initializes a `QuizBrain` object, and starts the quiz loop. After the quiz ends, it displays the final score.
 
 ### `question_model.py`
 
-This file contains the `Question` class, which represents a single question in the quiz. Each question object has a `text` attribute (the question text) and an `answer` attribute (the correct answer).
+> This file contains the `Question` class, which represents a single question in the quiz. Each question object has a `text` attribute (the question text) and an `answer` attribute (the correct answer).
 
 ### `quiz_brain.py`
 
-This file contains the `QuizBrain` class, which manages the quiz flow and keeps track of the question number, question list, and score. It has methods for checking if there are remaining questions, displaying the next question, checking if the answer is correct, and printing the current score.
+> This file contains the `QuizBrain` class, which manages the quiz flow and keeps track of the question number, question list, and score. It has methods for checking if there are remaining questions, displaying the next question, checking if the answer is correct, and printing the current score.
 
 ### `data.py`
 
-This file stores the quiz questions in the `question_data` list. Each question is represented as a dictionary with various attributes, such as category, type, difficulty, question text, correct answer, and incorrect answer options.
+> This file stores the quiz questions in the `question_data` list. Each question is represented as a dictionary with various attributes, such as category, type, difficulty, question text, correct answer, and incorrect answer options.
 
 ## Acknowledgments
 
