@@ -148,6 +148,20 @@ def main():
 
     # printNestedDictList(travel_log);
 
+  ## OOP Notes:
+    #* you can instantiate attributes of classes outside of a class block. for instance
+    """
+    class User:
+      pass;
+    
+    public_user = User();
+    public_user.name = "fred meyer"
+    public_user.age = 17; 
+
+    print(public_user) #[]"fred meyer", 17];
+    """
+    
+
     
     pass;
 
