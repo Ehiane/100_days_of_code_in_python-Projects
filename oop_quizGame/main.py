@@ -2,6 +2,16 @@ from data import question_data;
 from question_model import Question;
 from quiz_brain import QuizBrain;
 
+logo = """
+ ██████╗ ██╗   ██╗██╗███████╗     ██████╗  █████╗ ███╗   ███╗███████╗
+██╔═══██╗██║   ██║██║╚══███╔╝    ██╔════╝ ██╔══██╗████╗ ████║██╔════╝
+██║   ██║██║   ██║██║  ███╔╝     ██║  ███╗███████║██╔████╔██║█████╗  
+██║▄▄ ██║██║   ██║██║ ███╔╝      ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  
+╚██████╔╝╚██████╔╝██║███████╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗
+ ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
+                                                                     
+                                                                     
+"""
 #initialise a list of question objects using question class and the data file.
 question_bank = [];
 
@@ -20,7 +30,7 @@ for i in range(len(question_data)):
 
 quiz = QuizBrain(question_bank);
 
-
+print(logo);
 while(quiz.still_has_questions()):
     quiz.next_question();
 
