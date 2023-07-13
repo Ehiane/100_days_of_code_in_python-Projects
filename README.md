@@ -36,7 +36,7 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[☕🤖 OOP|Day 15: oop-coffee-Machine-Software](oop_coffeeMachineSoftware)**
 > very similar to Day 16, just in an OOP manner.
 
-**[❓🤔 💯|Day 17: OOP Quiz Game](oop_quizGame)**
+**[💯❓🤔 |Day 17: OOP Quiz Game](oop_quizGame)**
 > Built an Object-Oriented Quiz Game utilizing an external API to provide dynamic and engaging True/False questions for an interactive user experience.
 
 
