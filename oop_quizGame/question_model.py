@@ -11,6 +11,6 @@ class Question:
         self.answer = answer;
 
 #object instantiation;
-question1 = Question("There are 26 letters in the Alphabet", "False")
+# question1 = Question("There are 26 letters in the Alphabet", "False")
 
-
+# print(question1.text);
