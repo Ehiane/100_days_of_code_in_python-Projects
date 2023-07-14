@@ -102,7 +102,7 @@ def main():
 #   name1 = input("What is your name? \n")
 #   name2 = input("What is their name? \n")
 
-  
+  #----------------------[]---------------------------------------
 #   score = loveCalc(name1, name2);
 #   if score < 10 or score > 90:
 #     print(f"Your score is {score}, you go together like coke and mentos.");
@@ -115,7 +115,7 @@ def main():
     # vegetables = ["celery", "potatoes", "tomatoes"];
     # fruits_veg = [fruits,vegetables];
     # print(fruits_veg);
-
+#-----------------------------------------------------------[]--------------------------------------
     #list comprehension:
     # even_nums = [x for x in range(1,101) if x%2 ==0] #gives a list of even numbers from 1-100 in a
     # print(even_nums);
@@ -126,6 +126,7 @@ def main():
     # shift = int(input("Type the shift number:\n"))
     # encrypt(text, shift)
 
+#--------------------------------------------------[]------------------------------------
     # caesar(start_text=text, shift_amount=shift, cipher_direction=direction);
 
     # to wipe an existing dictionary you can just set it to {} and it'll automatically wipe it. 
