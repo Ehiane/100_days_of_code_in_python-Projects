@@ -56,3 +56,14 @@ The initial idea for this project came from Angela Yu's "100 Days of Code: The C
 Feel free to contribute to the project by submitting bug reports, feature requests, or pull requests. Enjoy playing Rock Paper Scissors in this advanced and interactive version!
 
 Note: This project is for educational and entertainment purposes only.
+
+
+## Contact
+*  🔗: [my website](http://www.ehiane.info/) 
+*  📧: ehis.oigiagbe@gmail.com
+<p align="left">
+    <a href="http://www.ehiane.info/" target="_blank"><img align="center" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/55af3614-5f7d-4774-be46-e26a1d98f97d" alt="My Website" height="30" width="30" /></a>
+    <a href="https://www.linkedin.com/in/ehiane-oigiagbe/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
+    <a href="https://github.com/Ehiane" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="40" /></a>
+    <a href="mailto:ehis.oigiagbe@gmail.com" target="_blank"><img align="center" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/5018798f-b468-4411-897a-085da028be38" alt="Gmail" height="30" width="40" /></a>
+</p>
