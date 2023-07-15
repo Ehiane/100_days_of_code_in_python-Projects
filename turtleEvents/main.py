@@ -1,5 +1,6 @@
 #Import(s):
 from turtle import Turtle, Screen
+import random as r
 
 #Object instantiation.
 # tim = Turtle();
@@ -49,6 +50,7 @@ screen.listen();
 # screen.onkey(key="c",fun=clear);
 
 #-------------------------[race]-------------------------------------------------------
+is_race_on = False
 
 screen.setup(width=500,height=400);
 # how to prompt user
@@ -67,7 +69,8 @@ since the size of the width is 500 and tim is at the center(0,0), to move to the
 
 y_positions = [0,-50,50,-100,100,150,-150];
 
-
+turtle_speeds = [x for x in range(11)]; #using list comprehension.
+turtle_racers = [];
 # first turtle
 offset = 15; 
 x_coordinate = -(screen.window_width()/2 - offset);
@@ -77,12 +80,38 @@ x_coordinate = -(screen.window_width()/2 - offset);
 
 def initialise_turtles(colors, y_positions):
     for lane in range(6):
-        tim =  Turtle(shape="turtle");
-        tim.color(colors[lane]);
-        tim.pu();
-        tim.goto(x= x_coordinate,y = y_positions[lane])
+        new_turtle =  Turtle(shape="turtle");
+        new_turtle.color(colors[lane]);
+        new_turtle.pu();
+        new_turtle.goto(x= x_coordinate,y = y_positions[lane]);
+        turtle_racers.append(new_turtle);
 
 initialise_turtles(colors, y_positions);
+
+
+
+if user_bet:
+    is_race_on = True;
+
+while is_race_on:
+    finish_line_reached = False;
+    for turtle_racer in turtle_racers:
+
+        if turtle_racer.xcor() > abs(x_coordinate):
+            winning_color = turtle_racer.pencolor();
+            if winning_color == user_bet:
+                print(f"YAY!!! you won the race!! {user_bet} is the winning color");
+            else:
+                print(f"YAY!!! you won the race!! {user_bet} is the winning color")
+            is_race_on = False;
+            break;
+
+
+        random_speed = r.choice(turtle_speeds);
+        turtle_racer.fd(random_speed)
+
+
+
 
 # !end portion
 screen.exitonclick();
