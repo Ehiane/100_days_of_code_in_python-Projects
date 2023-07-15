@@ -113,6 +113,8 @@ while is_race_on:
 
 
 
+
+
 # !end portion
 screen.exitonclick();
 
