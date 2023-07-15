@@ -33,13 +33,18 @@ def move_backwards():
     tim.backward(10);
 
 def turn_counterClockwise():
-    tim.left(30);
+    new_heading = tim.heading() + 10;
+    tim.setheading(new_heading);
 
 def turn_clockwise():
-    tim.right(-30);
+    new_heading = tim.heading() - 10;
+    tim.setheading(new_heading);
 
 def clear():
-    screen.clear();
+    tim.clear();
+    tim.penup()
+    tim.home()
+    tim.pendown()
 
 screen.onkey(key="w",fun=move_forwards);
 screen.onkey(key="s",fun=move_backwards);
