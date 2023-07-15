@@ -89,26 +89,40 @@ def initialise_turtles(colors, y_positions):
 initialise_turtles(colors, y_positions);
 
 
+import random as r
 
 if user_bet:
-    is_race_on = True;
+    is_race_on = True
 
 while is_race_on:
-    finish_line_reached = False;
+    finish_line_reached = True  # Assume all turtles have reached the finish line
+
     for turtle_racer in turtle_racers:
+        if turtle_racer.xcor() <= abs(x_coordinate):
+            random_speed = r.choice(turtle_speeds)
+            turtle_racer.forward(random_speed)
+            finish_line_reached = False  # At least one turtle hasn't reached the finish line
 
-        if turtle_racer.xcor() > abs(x_coordinate):
-            winning_color = turtle_racer.pencolor();
-            if winning_color == user_bet:
-                print(f"YAY!!! you won the race!! {user_bet} is the winning color");
-            else:
-                print(f"YAY!!! you won the race!! {user_bet} is the winning color")
-            is_race_on = False;
-            break;
+    if finish_line_reached:
+        is_race_on = False  # All turtles have reached the finish line
+
+        # Determine the winner
+        winner = None
+        winning_color = None
+
+        for turtle_racer in turtle_racers:
+            winner = turtle_racer;
+            if  winner or turtle_racer.xcor() > winner.xcor():
+                winner = turtle_racer
+                winning_color = turtle_racer.pencolor()
+
+        if winning_color == user_bet:
+            print(f"YAY!!! You won the race!! {user_bet} is the winning color")
+        else:
+            print(f"You lost! {user_bet} is not the winning color")
 
 
-        random_speed = r.choice(turtle_speeds);
-        turtle_racer.fd(random_speed)
+        
 
 
 
