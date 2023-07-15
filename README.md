@@ -39,7 +39,7 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[💯❓🤔 |Day 17: OOP Quiz Game](oop_quizGame)**
 > Built an Object-Oriented Quiz Game utilizing an external API to provide dynamic and engaging True/False questions for an interactive user experience.
 
-**[🐢🖼️🎨|turtleArtWorks](turtleArtWork)**
+**[🐢🖼️🎨|Day 19: turtleArtWorks](turtleArtWork)**
 > Replicated David Hirst's **Flumequine** art work using turtle graphics and other cool geometry based artworks. 
 
 
