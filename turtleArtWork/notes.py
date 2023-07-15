@@ -17,13 +17,13 @@ import math
 # timmy.shape("classic")
 # timmy.color("BlueViolet")
 
-def dashed_line(turtleObj, position):
-    turtleObj.pendown()
-    # toggles draw state off
-    turtleObj.setx(position)
-    turtleObj.penup()
-    # toggles draw state off
-    turtleObj.forward(10)
+# def dashed_line(turtleObj, position):
+#     turtleObj.pendown()
+#     # toggles draw state off
+#     turtleObj.setx(position)
+#     turtleObj.penup()
+#     # toggles draw state off
+#     turtleObj.forward(10)
 
 
 # start_position = 0;
@@ -252,9 +252,9 @@ def random_color():
 
 # draw_spirograph(5);
 
-#done handling positioning.
+# # done handling positioning.
 
-# keep at the very bottom.
+# # keep at the very bottom.
 # timmy.end_fill(); #ends the thickness effect.
 
 # screen.exitonclick()
