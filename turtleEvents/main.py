@@ -2,7 +2,7 @@
 from turtle import Turtle, Screen
 
 #Object instantiation.
-tim = Turtle();
+# tim = Turtle();
 screen = Screen();
 
 #! start listening for events.
@@ -10,6 +10,7 @@ screen.listen();
 
 #*Note: [this concept is called higher order function.]when using a function as a argument in another function, don't put the parenthesis.
 
+# tim.shape("turtle");
 # screen.onkey(key="space", fun=move_forwards); #has to args: (funct, key)... what you want it to do when you press key
 
 
@@ -52,8 +53,9 @@ screen.listen();
 screen.setup(width=500,height=400);
 # how to prompt user
 user_bet = screen.textinput(title="Make your bet", prompt="Which prompt will win the race? Enter a color: ");
+# print(user_bet); #printed to the screen.
 
-print(user_bet); #printed to the screen.
+colors = ["red", "orange", "yellow","green", "blue", "purple"]
 
 # it's key to understand the coordinate system to know where to position objects  
 
@@ -61,10 +63,26 @@ print(user_bet); #printed to the screen.
 since the size of the width is 500 and tim is at the center(0,0), to move to the extreme end(by logic, it should be) (x=-250 and y =0), however, -250 is the exact edge of the window, so it wont actually display the object.
 """
 
-offset = 15; 
-x_coordinate = -(screen.window_width()/2 - offset)
-tim.goto(x= x_coordinate, y=0);
+# creating 6 turtles.
 
+y_positions = [0,-50,50,-100,100,150,-150];
+
+
+# first turtle
+offset = 15; 
+x_coordinate = -(screen.window_width()/2 - offset);
+# tim.pu(); #pu - penup
+#changed the shape to a turtle.
+
+
+def initialise_turtles(colors, y_positions):
+    for lane in range(6):
+        tim =  Turtle(shape="turtle");
+        tim.color(colors[lane]);
+        tim.pu();
+        tim.goto(x= x_coordinate,y = y_positions[lane])
+
+initialise_turtles(colors, y_positions);
 
 # !end portion
 screen.exitonclick();
