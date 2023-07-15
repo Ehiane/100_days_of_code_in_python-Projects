@@ -2,6 +2,10 @@
 
 This is a Python program called "Higher or Lower" that allows users to play a guessing game based on the number of followers of different celebrities. The program presents two celebrities and asks the user to guess who has more followers on a social media platform. The user's score increases if the guess is correct, and the game continues until the user makes an incorrect guess.
 
+## Demo
+![Untitled video - Made with Clipchamp (2)](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/cb829e89-610f-41d0-8670-c1594b34cf27)
+
+
 ## How to Play
 
 
