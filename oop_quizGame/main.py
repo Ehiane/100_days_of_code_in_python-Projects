@@ -24,9 +24,6 @@ for i in range(len(question_data)):
 # print(list_of_questions[len(question_data) -1].text); this was to verify that it works.
 
 #now that we have that running we have some TODO 's to handle
-#TODO: asking the questions
-#TODO: checking if the answer was correct
-#TODO: checking if we're the end of the quiz
 
 quiz = QuizBrain(question_bank);
 

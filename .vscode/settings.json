@@ -1,5 +1,5 @@
 {
-    "todo-tree.tree.showBadges": false,
+    "todo-tree.tree.showBadges": true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
