@@ -26,6 +26,7 @@ screen.title("snake pytonia")
 screen.tracer(0); 
 
 #* Initialising the snake;
+
 snake = Snake();
 
 # !listening for events 
