@@ -6,12 +6,12 @@ MOVE_DISTANCE = 20;
 UP, DOWN,  LEFT, RIGHT = 90, 270, 180, 0;
 class Snake:
     def __init__(self):
-        # * Creating a Snake body
         self.segments = [];
         self.create_snake();
         self.head = self.segments[0];
 
 
+        # * Creating a Snake body
     def create_snake(self):
         for position in STARTTING_POSITIONS:
             new_segment = Turtle("square");
