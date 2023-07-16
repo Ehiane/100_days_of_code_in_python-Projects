@@ -26,7 +26,6 @@ screen.title("snake pytonia")
 screen.tracer(0); 
 
 #* Initialising the snake;
-
 snake = Snake();
 
 # !listening for events 
@@ -43,6 +42,8 @@ while game_is_on:
     screen.update();
     time.sleep(0.1);
     snake.move();
+
+
 
 
 
