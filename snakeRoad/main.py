@@ -3,7 +3,7 @@
     #  motion of the snake -- let the snake move continously forward
     #  motion control -- using keybord events
 
-#Done with part 1
+#& --> Done with part 1
 
 #Part2:
     # put food on the screen
@@ -11,7 +11,7 @@
     # update score
     # end cases detect collision with screen and collision with self(tail).
 
-#Imports:
+#Import(s):
 from turtle import Screen;
 from snake import Snake;
 import time
