@@ -13,6 +13,9 @@ class Snake:
 
         # * Creating a Snake body
     def create_snake(self):
+        """
+        initialises the three starting squares of the snake.
+        """
         for position in STARTTING_POSITIONS:
             new_segment = Turtle("square");
             new_segment.color("white");
