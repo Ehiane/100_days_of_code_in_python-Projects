@@ -5,11 +5,13 @@ import random as r
 #Object instantiation.
 # tim = Turtle();
 screen = Screen();
+# def move_forwards():
+#     tim.forward(10);
 
 #! start listening for events.
-screen.listen();
+# screen.listen();
 
-#*Note: [this concept is called higher order function.]when using a function as a argument in another function, don't put the parenthesis.
+# #*Note: [this concept is called higher order function.]when using a function as a argument in another function, don't put the parenthesis.
 
 # tim.shape("turtle");
 # screen.onkey(key="space", fun=move_forwards); #has to args: (funct, key)... what you want it to do when you press key
@@ -23,8 +25,6 @@ screen.listen();
 # C - clear and reposition.
 
 # making the functions to carry out events.
-# def move_forwards():
-#     tim.forward(10);
 
 # def move_backwards():
 #     tim.backward(10);
