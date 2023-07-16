@@ -36,6 +36,7 @@ screen.onkey(fun= snake.left,key="Left");
 screen.onkey(fun= snake.right,key="Right");
 
 game_is_on = True;
+
 while game_is_on:
     #responsible for the refresh rate and allows the snake to move as one even though the body is divided into diffrent segments
     screen.update();
