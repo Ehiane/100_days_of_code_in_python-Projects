@@ -3,6 +3,8 @@
     #  motion of the snake -- let the snake move continously forward
     #  motion control -- using keybord events
 
+#Done with part 1
+
 #Part2:
     # put food on the screen
     # detect collision with food and generate food randomly

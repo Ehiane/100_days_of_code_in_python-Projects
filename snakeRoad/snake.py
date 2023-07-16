@@ -20,7 +20,6 @@ class Snake:
             new_segment.goto(position);
             self.segments.append(new_segment);
     
-
     def move(self):
         """
         moves the snake in forward by 20 pxls
