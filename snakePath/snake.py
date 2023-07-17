@@ -50,6 +50,14 @@ class Snake:
     def extend(self):
         self.add_segment(self.segments[-1].position());
     
+    def reset(self):
+    # Reset the snake's position, segments, and other attributes
+        for segment in self.segments:
+            segment.goto(1000, 1000)  # Move segments off-screen
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+        self.speed = 15
 
     # Directions
     def up(self):

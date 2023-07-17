@@ -52,14 +52,6 @@ screen.onkey(fun= snake.down,key="Down");
 screen.onkey(fun= snake.left,key="Left");
 screen.onkey(fun= snake.right,key="Right");
 
-def check_key():
-    if restart_key: 
-        score_board.clear();
-        indicator = screen.textinput(title="Do you want to restart?", prompt="Yes or No").lower();
-        if indicator == "yes":
-            play_game();
-
-
 screen.listen();
 screen.onkeypress(key_press, 'space');
 
@@ -84,7 +76,6 @@ def play_game():
         #Detect collision with wall:
         if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
             score_board.end_game();
-            # check_key();
             game_is_on = False;
     
 
@@ -94,6 +85,12 @@ def play_game():
             if snake.head.distance(segment) < 10:
                 score_board.end_game();
                 game_is_on = False;
+            
+            # if segment == snake.head:
+            #     pass;
+            # elif snake.head.distance(segment) < 10:
+            #     score_board.end_game();
+            #     game_is_on = False;
         
         # if tail collides with any of thr body segments
         #trigger end game .
