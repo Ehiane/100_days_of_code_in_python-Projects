@@ -1,7 +1,7 @@
 #Imports:
 from turtle import Turtle;
 STARTTING_POSITIONS = [(0,0),(-20,0),(-40,0)]
-MOVE_DISTANCE = 20;
+MAX_SPEED = 21; #this is the maximum distance between segments before seeing visible separation lines.
 
 UP, DOWN,  LEFT, RIGHT = 90, 270, 180, 0;
 class Snake:
@@ -9,6 +9,7 @@ class Snake:
         self.segments = [];
         self.create_snake();
         self.head = self.segments[0];
+        self.speed = 15;
 
 
         # * Creating a Snake body
@@ -17,11 +18,7 @@ class Snake:
         initialises the three starting squares of the snake.
         """
         for position in STARTTING_POSITIONS:
-            new_segment = Turtle("square");
-            new_segment.color("white");
-            new_segment.pu(); #to stop drawing the line.
-            new_segment.goto(position);
-            self.segments.append(new_segment);
+            self.add_segment(position);
     
     def move(self):
         """
@@ -40,7 +37,19 @@ class Snake:
             new_x = self.segments[seg_num - 1].xcor();
             new_y = self.segments[seg_num - 1].ycor();
             self.segments[seg_num].goto(new_x,new_y);
-        self.head.fd(MOVE_DISTANCE);
+        self.head.fd(self.speed);
+
+
+    def add_segment(self,position):
+        new_segment = Turtle("square");
+        new_segment.color("white");
+        new_segment.pu(); #to stop drawing the line.
+        new_segment.goto(position);
+        self.segments.append(new_segment);
+    
+    def extend(self):
+        self.add_segment(self.segments[-1].position());
+    
 
     # Directions
     def up(self):
@@ -58,3 +67,9 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT);
+
+    def move_faster(self):
+        if self.speed < MAX_SPEED:
+            self.speed += 0.5;
+        else:
+            print("You have reached max speed")
