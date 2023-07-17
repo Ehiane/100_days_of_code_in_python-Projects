@@ -1,8 +1,8 @@
-# Snake Game
+# 🐍🕹️🎮|Snake Game
 
 This Snake Game is a classic arcade-style game built using Python and the Turtle graphics module. The game allows the player to control a snake and navigate it on the screen to eat food and grow in length. The goal is to achieve the highest possible score without colliding with the walls or the snake's own body.
 
-##Demo 
+## Demo 
 ![snake demo - Made with Clipchamp](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/235386bd-b554-4786-a756-da7dba34c715)
 
 ## Game Features
