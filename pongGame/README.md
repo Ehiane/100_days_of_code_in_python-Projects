@@ -1,6 +1,13 @@
-# Pin-Pong Game
+# 🏓🎮🕹️|Pin-Pong Game
 
 This is a simple implementation of the classic game "Ping-Pong" using Python and Turtle graphics.
+
+## Demo
+<div align="center">
+  <img src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/7b150bc8-89b5-4f8e-b297-fc21d559ddcf" alt="pin-pong - Made with Clipchamp">
+</div>
+
+
 
 ## Game Components
 
