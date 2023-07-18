@@ -10,7 +10,7 @@
     # keep score ##Done
 
 # %Globals
-LEFT_PADDLE_START_POSITION = (-350,0); #i would like for both to be symmetrical but Tkinter is acting up
+LEFT_PADDLE_START_POSITION = (-350,0); 
 RIGHT_PADDLE_START_POSITION = (350,0);
 ON,OFF= True, False;
 
@@ -28,8 +28,7 @@ screen.setup(width=800, height= 800);
 screen.bgcolor("black");
 screen.title("Pin-Pong");
 
-
-# @Object Instantiation:
+# %Object Instantiation:
 # Paddles
 left_paddle = Paddle(LEFT_PADDLE_START_POSITION, name="player1");
 right_paddle = Paddle(RIGHT_PADDLE_START_POSITION, name="player2");
@@ -52,6 +51,7 @@ screen.onkey(fun=right_paddle.down, key="Down");
 # ScoreBoard
 score_board = ScoreBoard();
 
+#Turning on game engine
 game_engine = ON;
 
 while game_engine:
@@ -89,14 +89,5 @@ while game_engine:
         ball.reset();
         score_board.update_right_score();
         
-
-
-
-    
-
-
-
-
-
 # ! end of screen
 screen.exitonclick();
