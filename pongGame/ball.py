@@ -40,6 +40,9 @@ class Ball(Turtle):
         self.trajectory *= 0.95;
     
     def reset(self):
+        """
+        resets the ball positions and speed to default once called.
+        """
         self.clear();
         self.goto((0,0));
         self.trajectory = 0.1; #reset game_speed after a round loss
