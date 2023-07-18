@@ -6,8 +6,8 @@
     # make the ball move ##Done
     # detect collision with wall and bounce ##Done
     # detect collision with paddle ##Done
-    # detect when paddle misses
-    # keep score
+    # detect when paddle misses ##Done
+    # keep score ##Done
 
 # %Globals
 LEFT_PADDLE_START_POSITION = (-350,0); #i would like for both to be symmetrical but Tkinter is acting up
