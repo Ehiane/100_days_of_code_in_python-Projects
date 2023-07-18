@@ -42,6 +42,15 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[🐢🖼️🎨|Day 19: turtleArtWorks](turtleArtWork)**
 > Replicated David Hirst's **Flumequine** art work using turtle graphics and other cool geometry based artworks. 
 
+**[🐍🕹️🎮|Day 20 & 21: snakeGame](snakePath)**
+> Using OOP to replicate the classic snake xzneia game from the nokia phone.
+
+**[🐍🕹️🎮|Day 22: pin-pong](snakePath)**
+> Using OOP to replicate the classic pin-pong game. This game makes use of a scoreboard and updates player's points.
+
+
+
+
 
 ## Credits
 
