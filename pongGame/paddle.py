@@ -1,8 +1,5 @@
 from turtle import Turtle;
 
-
-
-# work on paddle movements
 class Paddle(Turtle):
     def __init__(self, position,name,color = "red"):
         super().__init__();
@@ -14,14 +11,17 @@ class Paddle(Turtle):
         self.goto(position);
         self.color(color);
 
-    def get_player_name(self):
-        pass;
-
     def up(self):
+        """
+        increases the y-coordinate of the paddle by 20, once called
+        """
         new_y = self.ycor() + 20;
         self.goto(self.xcor(), new_y);
 
     def down(self):
+        """
+        decreases the y-coordinate of the paddle by 20, once called
+        """
         new_y = self.ycor() - 20;
         self.goto(self.xcor(), new_y);
 
