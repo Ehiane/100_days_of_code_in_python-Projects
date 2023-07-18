@@ -41,6 +41,9 @@ class Snake:
 
 
     def add_segment(self,position):
+        """
+        increases length of snake by one segment.
+        """
         new_segment = Turtle("square");
         new_segment.color("white");
         new_segment.pu(); #to stop drawing the line.
@@ -48,10 +51,15 @@ class Snake:
         self.segments.append(new_segment);
     
     def extend(self):
+        """
+        calls the add_segment function.
+        """
         self.add_segment(self.segments[-1].position());
     
     def reset(self):
-    # Reset the snake's position, segments, and other attributes
+        """
+        Resets the snake's position, segments, and other attributes
+        """
         for segment in self.segments:
             segment.goto(1000, 1000)  # Move segments off-screen
         self.segments.clear()
@@ -61,22 +69,37 @@ class Snake:
 
     # Directions
     def up(self):
+        """
+        moves the snake's head up and the rest follows.
+        """
         if self.head.heading() != DOWN:
             self.head.setheading(UP);
 
     def down(self):
+        """
+        moves the snake's head down and the rest follows.
+        """
         if self.head.heading() != UP:
             self.head.setheading(DOWN);
 
     def left(self):
+        """
+        moves the snake's head left  and the rest follows.
+        """
         if self.head.heading() != RIGHT:
             self.head.setheading(LEFT);
 
     def right(self):
+        """
+        moves the snake's head right and the rest follows.
+        """
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT);
 
     def move_faster(self):
+        """
+        increases snake speed by 0.5;
+        """
         if self.speed < MAX_SPEED:
             self.speed += 0.5;
         else:
