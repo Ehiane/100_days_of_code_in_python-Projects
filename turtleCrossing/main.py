@@ -20,6 +20,9 @@ my_player = Player();
 # * Instantiating the car class.
 first_car = CarManager();
 
+#  *Instantiating the score board.
+score_board = Scoreboard();
+
 # $Key-Bindings:
 screen.listen(); #this is necessary for your key bindings to work.
 screen.onkey(fun=my_player.move_up,key="Up");
@@ -32,6 +35,7 @@ fleet_of_cars = [first_car];
 while Game_Engine:
     time.sleep(0.1);
     screen.update(); #works hand-in-hand with '.tracer()' to update the frames every 0.1 seconds.
+    score_board.display_score();
 
     # Movement of cars
     for first_car in fleet_of_cars:
@@ -49,9 +53,19 @@ while Game_Engine:
             # print endgame stuff and stop count;
             Game_Engine = OFF
 
+    #Determine if the player is at the finish line:
+    if my_player.is_at_finish_line():
+
+        # change the level and reset the scoreboard;;
+        score_board.end_game();
+
+        # increase the speed of all the cars;
+        for car in fleet_of_cars:
+            car.speed_up();
+        pass;
+
+
     counter+= 1; #used to help me generate other cars
-
-
 
 # !end of screen
 screen.exitonclick();

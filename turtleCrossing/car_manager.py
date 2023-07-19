@@ -44,5 +44,14 @@ class CarManager(Turtle):
         return new_car;
 
     def is_6th_time(self,counter):
+        """
+        checks if the iteration is at it 6th call
+        """
         return True if counter > 0 and counter %6 == 0 else False;
+
+    def speed_up(self):
+        """
+        increases the speed of the cars by +10 pixels;
+        """
+        self.mph += MOVE_INCREMENT;
 

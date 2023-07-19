@@ -31,3 +31,10 @@ class Player(Turtle):
         # change the y-coordinate;
         new_y = self.ycor() + MOVE_DISTANCE;
         self.goto(self.xcor(),new_y);
+
+    def is_at_finish_line(self):
+        """
+        a boolean that returns true if at the finish line 
+        and vice-versa.
+        """
+        return True if self.ycor() >= FINISH_LINE_Y else False;
