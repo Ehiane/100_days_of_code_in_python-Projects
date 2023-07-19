@@ -51,19 +51,23 @@ while Game_Engine:
     for car in fleet_of_cars:            
         if my_player.distance(car) < 25:
             # print endgame stuff and stop count;
+            score_board.end_game();
             Game_Engine = OFF
 
     #Determine if the player is at the finish line:
     if my_player.is_at_finish_line():
 
         # change the level and reset the scoreboard;;
-        score_board.end_game();
+        my_player.reset();
+        score_board.update_level();
+        score_board.reset();
 
         # increase the speed of all the cars;
         for car in fleet_of_cars:
             car.speed_up();
         pass;
 
+    
 
     counter+= 1; #used to help me generate other cars
 

@@ -38,3 +38,7 @@ class Player(Turtle):
         and vice-versa.
         """
         return True if self.ycor() >= FINISH_LINE_Y else False;
+
+    def reset(self):
+        self.clear();
+        self.goto(STARTING_POSITION);

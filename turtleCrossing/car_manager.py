@@ -38,9 +38,11 @@ class CarManager(Turtle):
 
     def generate_new_car(self):
         """
-        generates a new car instance once called.
+        generates a new car instance once called, and sets the new car to the current 
+        speed.
         """
         new_car = self.__class__(); #had to search this up from stackoverflow.
+        new_car.mph = self.mph;
         return new_car;
 
     def is_6th_time(self,counter):
