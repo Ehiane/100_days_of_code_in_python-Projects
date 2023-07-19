@@ -45,7 +45,7 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[🐍🕹️🎮|Day 20 & 21: snakeGame](snakePath)**
 > Using OOP to replicate the classic snake xzneia game from the nokia phone.
 
-**[🐍🕹️🎮|Day 22: pin-pong](snakePath)**
+**[🏓🎮🕹️|Day 23: Pin-Pong Game](pongGame)**
 > Using OOP to replicate the classic pin-pong game. This game makes use of a scoreboard and updates player's points.
 
 
