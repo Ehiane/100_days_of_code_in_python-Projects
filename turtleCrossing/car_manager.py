@@ -42,3 +42,7 @@ class CarManager(Turtle):
         """
         new_car = self.__class__(); #had to search this up from stackoverflow.
         return new_car;
+
+    def is_6th_time(self,counter):
+        return True if counter > 0 and counter %6 == 0 else False;
+
