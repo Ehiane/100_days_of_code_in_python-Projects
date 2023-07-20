@@ -21,7 +21,7 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[⌨️🧮 ➗ |Day 10: txtBasedCalc](txtBasedCalc)**
 > Developed a text-based calculator application that incorporates functions with outputs, loops, and informative docstrings.
 
-**[Day 11 (🧢🪨| Capstone): txtBasedBlackJack](txtBaseBlackJack)**
+**[Day 11 (🧢🪨| Capstone): txtBasedBlackJack🃏🕹️💰](txtBaseBlackJack)**
 > Designed a text-based version of the popular card game "Blackjack," employing loops, functions, dictionaries, and the range function to simulate gameplay.
 
 **[🔢🗣️🎮 |Day 12: numberGuesser](numberGuesser)**
@@ -42,13 +42,17 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[🐢🖼️🎨|Day 19: turtleArtWorks](turtleArtWork)**
 > Replicated David Hirst's **Flumequine** art work using turtle graphics and other cool geometry based artworks. 
 
-**[🐍🕹️🎮|Day 20 & 21 & 24: snakeGame](snakePath)**
-> Using OOP to replicate the classic snake xzneia game from the nokia phone, with a boarder screen on day 24.
+**[🐍🕹️🎮|Day 20 & 21 & 25: snakeGame](snakePath)**
+> Using OOP to replicate the classic snake xzneia game from the nokia phone, with a boarder screen on day 25.
 
 **[🏓🎮🕹️|Day 23: Pin-Pong Game](pongGame)**
 > Using OOP to replicate the classic pin-pong game. This game makes use of a scoreboard and updates player's points.
 
-**[📨🤖⌨️|Day 24: email Automation](emailAutomation)**
+**[Day 24(🧢🪨) turtlecrossing🐢🛣️🚗](turtleCrossing)**
+> This project tested all my knowledge of the Turtle Graphics class  made me understand the need for reading documentation.
+
+
+**[📨🤖⌨️|Day 25: email Automation](emailAutomation)**
 > Manufactured a script that generates the same letter content to different people by using a list of names and sample text.
 
 ## Credits
