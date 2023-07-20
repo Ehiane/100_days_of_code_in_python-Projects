@@ -17,7 +17,7 @@ from snake import Snake;
 import time
 from food import Food;
 from scoreboard import ScoreBoard;
-
+from border import Boarder; 
 
 restart_key = False;
 
@@ -33,6 +33,7 @@ screen.setup(width=600, height=600);
 screen.bgcolor("black");
 screen.title("snake pytonia")
 
+
 #* turning the tracer off to reduce the frame by frame animation
 screen.tracer(0); 
 
@@ -45,6 +46,10 @@ food = Food();
 #* Initialising the score board;
 score_board = ScoreBoard();
 
+#* Initialising the boarder;
+boarder = Boarder(window_length=screen.window_height(), window_width=screen.window_width());
+
+
 # !listening for events 
 screen.listen();
 screen.onkey(fun= snake.up,key="Up");
@@ -56,8 +61,15 @@ screen.listen();
 screen.onkeypress(key_press, 'space');
 
 
+
+
+
+
+
+
 def play_game():
     game_is_on = True;
+    boarder.draw_border() #incase you go full screen.
     while game_is_on:
         #responsible for the refresh rate and allows the snake to move as one even though the body is divided into diffrent segments
         screen.update();
@@ -76,6 +88,7 @@ def play_game():
         #Detect collision with wall:
         if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
             score_board.reset();
+            score_board.save_high_score();
             snake.reset();
            
     
@@ -85,12 +98,14 @@ def play_game():
         for segment in new_segemnts:
             if snake.head.distance(segment) < 10:
                 score_board.reset();
+                score_board.save_high_score();
                 snake.reset();
                 
          
         
         # if tail collides with any of thr body segments
         #trigger end game .
+
 
 screen.onkey(fun= play_game,key="Tab");
 

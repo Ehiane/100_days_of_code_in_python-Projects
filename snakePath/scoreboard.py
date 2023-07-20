@@ -15,6 +15,7 @@ class ScoreBoard(Turtle):
         self.color("white");
         self.goto((0,255));
         self.display_score();
+        self.read_high_score();
         
 
     def display_score(self):
@@ -36,6 +37,8 @@ class ScoreBoard(Turtle):
         if self.score > self.highscore:
             self.highscore = self.score;
         self.score = 0;
+        self.clear();
+        self.display_score();
     
 
     def Write(self, text):
@@ -44,6 +47,20 @@ class ScoreBoard(Turtle):
         """
         self.write(arg=text, align= ALIGNMENT, font=FONT);
 
+    def save_high_score(self):
+        with open("snakePath/score_data.txt","w") as file:
+            file.write(f"High Score: {self.highscore}  \nCurrent Score: {self.score}  ");
+    
+
+    def read_high_score(self):
+        with open("snakePath/score_data.txt","r") as file:
+            lines = file.readlines();
+            print(lines[0]);
+            if len(lines) != 0:
+                score = lines[0][12:-1]; #from that index to the last part of the line.
+                self.highscore = int(score);
+                  
+    
 
     """
         def end_game(self):
