@@ -1,5 +1,8 @@
 import helperFunctions as Help
-from turtle import Turtle, Screen
+import csv;
+
+
+# from turtle import Turtle, Screen
 # from prettytable import PrettyTable
 
 
@@ -105,6 +108,18 @@ w: clears then writes
 
 
 
+# def read_csv(file_name):
+#     temps = [];
+#     with open(file_name) as file:
+#       data = csv.reader(file);
+#       for row in data:
+#         # print all the temoeratures
+#         if row[1] != "temp":
+#           temp = int(row[1]);
+#           temps.append(temp);
+        
+#         # print(row);
+#       print(temps)
 
 
 def main():
@@ -130,6 +145,10 @@ def main():
 #   print("Welcome to the Love Calculator!")
 #   name1 = input("What is your name? \n")
 #   name2 = input("What is their name? \n")
+
+
+  # print(data);
+  # read_csv("weather_data.csv");
 
   #----------------------[]---------------------------------------
 #   score = loveCalc(name1, name2);
@@ -180,19 +199,18 @@ def main():
 
   ## OOP Notes:
     #* you can instantiate attributes of classes outside of a class block. for instance
-    """
-    class User:
-      pass;
     
-    public_user = User();
-    public_user.name = "fred meyer"
-    public_user.age = 17; 
+    # """
+    # class User:
+    #   pass;
+    
+    # public_user = User();
+    # public_user.name = "fred meyer"
+    # public_user.age = 17; 
 
-    print(public_user) #[]"fred meyer", 17];
-    """
-    
-
-    
-    pass;
+    # print(public_user) #[]"fred meyer", 17];
+    # """
+      
+  pass;
 
 main();
