@@ -1,6 +1,6 @@
 ![email-gif-1200](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/abcb7159-ba45-4bcd-8aef-b6ce4b9b9677)
 
-# Automated Letter Generation
+# 📨🤖⌨️|emailAutomation
 
 This Python script generates personalized letters by replacing placeholders in a template with names from a given list. It reads the list of names from `invited_names.txt`, uses a starting letter template from `starting_letter.txt`, replaces the `[name]` placeholder with the actual name, and saves the personalized letters in the "ReadyToSend" folder.
 
