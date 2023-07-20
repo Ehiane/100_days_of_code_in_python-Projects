@@ -75,22 +75,19 @@ def play_game():
 
         #Detect collision with wall:
         if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-            score_board.end_game();
-            game_is_on = False;
+            score_board.reset();
+            snake.reset();
+           
     
 
         #Detect collision with Tail.
         new_segemnts = snake.segments[1:];
         for segment in new_segemnts:
             if snake.head.distance(segment) < 10:
-                score_board.end_game();
-                game_is_on = False;
-            
-            # if segment == snake.head:
-            #     pass;
-            # elif snake.head.distance(segment) < 10:
-            #     score_board.end_game();
-            #     game_is_on = False;
+                score_board.reset();
+                snake.reset();
+                
+         
         
         # if tail collides with any of thr body segments
         #trigger end game .

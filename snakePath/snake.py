@@ -67,6 +67,15 @@ class Snake:
         self.head = self.segments[0]
         self.speed = 15
 
+    def reset(self):
+        # move the snake body to somewhere of the screen.
+        for seg in self.segments:
+            self.goto(1000,1000);
+        
+        self.segments.clear();
+        self.create_snake();
+        self.head = self.segments[0];
+
     # Directions
     def up(self):
         """

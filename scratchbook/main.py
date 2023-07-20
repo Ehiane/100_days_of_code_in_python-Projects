@@ -1,6 +1,6 @@
 import helperFunctions as Help
 from turtle import Turtle, Screen
-from prettytable import PrettyTable
+# from prettytable import PrettyTable
 
 
 
@@ -27,7 +27,7 @@ from prettytable import PrettyTable
 
 
 # #Pretty Table class
-table = PrettyTable();
+# table = PrettyTable();
 
 # table.field_names = ["Name", "Club", "Position", "Nationality", "Number"];
 # table.add_rows( [
@@ -39,10 +39,10 @@ table = PrettyTable();
 # table.add_row(["Kylian Mbappe", "Paris-Saint-German(PSG)", "ST","France", "7"]);
 
 #challenge
-table.add_column("Pokemon Name",["Pikachu","Squirtle","Charamander"], align="l");
-table.add_column("Type",["Electric", "Water", "Fire"], align="l");
+# table.add_column("Pokemon Name",["Pikachu","Squirtle","Charamander"], align="l");
+# table.add_column("Type",["Electric", "Water", "Fire"], align="l");
 
-print(table);
+# print(table);
 
 
 #calculator essentials:
@@ -76,6 +76,35 @@ print(table);
 
 # do = operations["+"]
 # do(2, 3)
+
+# #Opening Files.
+# file = open("external.txt");
+# contents = file.read(); #returns the content of the file as a string.
+# print(contents);
+
+# essential to free up the resources of the computer.
+# file.close();
+
+
+# with the "with" keyword, there's no need to manually close the file, the functions
+# handles that scenario by checking exactly when we are done manipulating with the file.
+# modes: 
+"""
+a : append
+w: clears then writes
+"""
+
+# if file mentioned is non-existent, 
+# python will make the file for you.
+# with open("external.txt", mode= "a") as file:
+#     file.write("\nNew text");
+
+    # contents = file.read();
+    # print(contents);
+
+
+
+
 
 
 def main():
