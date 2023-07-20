@@ -12,6 +12,7 @@ This Snake Game is a classic arcade-style game built using Python and the Turtle
 - Motion control: The player can control the snake's direction using the keyboard arrow keys.
 - Food generation: Food is randomly generated on the screen for the snake to eat.
 - Score tracking: The score is updated every time the snake eats food.
+- HighScore retention: The highest score earned by the user can now be updated and rembered antime you play the game.
 - Collision detection: The game detects collisions with the walls and the snake's own body, leading to game over.
 - Game restart: The player can restart the game by pressing the spacebar when prompted.
 
@@ -43,6 +44,7 @@ The project consists of the following classes:
 - `food.py`: Defines the `Food` class responsible for generating and updating the food on the screen.
 - `scoreboard.py`: Defines the `ScoreBoard` class responsible for tracking and displaying the player's score.
 - `notes.py`: Contains additional code snippets showcasing the concept of class inheritance.
+- `border.py`: Contains code to define the boarders of the screen if the user eventually decides to go fullscreen.
 
 ## Contribution and Bug Reporting
 
