@@ -126,7 +126,7 @@ def display_score(score):
 # !SOURCE CODE:
 def play(dataFrame):
     global correct_guesses, Game_Engine
-    while Game_Engine and correct_guesses < NUMBER_OF_STATES:
+    while Game_Engine or correct_guesses < NUMBER_OF_STATES:
         user_guess = screen.textinput(
             title=f"{correct_guesses} / {NUMBER_OF_STATES} States Correct",
             prompt="type 'quit' to quit at anytime ",
