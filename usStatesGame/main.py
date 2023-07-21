@@ -7,7 +7,7 @@ import pandas
  
 FILE = "usStatesGame/50_states.csv"
 FONT = ("Courier", 8, "normal")
-SCORE_FONT = ("Space Mono", 11, "bold")
+SCORE_FONT = ("Courier", 100, "bold")
 IMAGE = "usStatesGame/blank_states_img.gif"
 NUMBER_OF_STATES = 50
 IMAGE_DIMENSION = (725, 491)
