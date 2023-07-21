@@ -7,6 +7,7 @@ import pandas
  
 FILE = "usStatesGame/50_states.csv"
 FONT = ("Courier", 8, "normal")
+SCORE_FONT = ("Space Mono", 11, "bold")
 IMAGE = "usStatesGame/blank_states_img.gif"
 NUMBER_OF_STATES = 50
 IMAGE_DIMENSION = (725, 491)
@@ -34,13 +35,21 @@ guessed_state = [] #used for accountability.
 # turtle.onscreenclick(get_mouse_click_coor);
 
 
+#& PROGRAM BREAK-DOWN:
+#* 1. Import turtle class and screen from turtle module 
+#* 2. Find a way to display & set-up the image on the screen and adjust screen size to fit, use <screen.mainloop> to implement constant display of the screen.
+#* 3. Import Pandas module and read data from the csv file as a DataFrame.
+#* 4. Have a while loop that runs to a certain requirement is met or triggered.
+#* 5. Make use of the input function from turtle to prompt user for a state name.
+#* 7. compare the user's answer against all of the states in the DataFrame. 
+#* 8. If there's match, collect the information in a row format.
+#* 9. Get the x and y attributes of that row.
+#* 10. Display the answer at it's particular coordinates.
+#* 11. Repeat till the guesses reach 50 or the user types "quit".
+#* 12. If the user types quit, all the un-answered states will be displayed.
+#* 13. The user's score will be displayed.
 
-# $ Activity: Read from the csv, get the x and y values, then ask the user for an answer
-# check user's answer against all the state's and see if it matches them:
-#  get the x and y values then display the text on that location
-#  update the number of states gotten
-# initialise the pandas dataframe
-
+#//FUNCTION DEFINITIONS:
 def reveal_state(x, y, state_data):
     """
     has a new turtle object that prints the result
@@ -96,11 +105,25 @@ def reveal_all_states(guessed_states=guessed_state, states_data_base=states_data
     pass
 
 
+def display_score(score):
+    scorer = turtle.Turtle();
+    scorer.hideturtle();
+    scorer.pu();
+    scorer.goto(-20,185);
+    if score <= 10:
+        scorer.pencolor("red");
+    if 10 < score < 25:
+        scorer.pencolor("orange");
+    if 25 <= score < 40:
+        scorer.pencolor("lightgreen");
+    if 40<= score < 45:
+        scorer.pencolor("green");
+    if score >=45:
+        scorer.pencolor("darkgreen")
+    scorer.write(arg=f"You scored: {score} / 50", align= "center", font= FONT);
 
 
-
-
-
+# !SOURCE CODE:
 def play(dataFrame):
     global correct_guesses, Game_Engine
     while Game_Engine and correct_guesses < NUMBER_OF_STATES:
@@ -110,6 +133,7 @@ def play(dataFrame):
         ).title()
 
         if user_guess == "Quit":
+            display_score(correct_guesses);
             reveal_all_states()
             Game_Engine = OFF
 
@@ -127,9 +151,13 @@ def play(dataFrame):
                 state_guessed = reveal_state(x=x, y=y, state_data=user_guess_row.state)
                 guessed_state.append(state_guessed)
                 correct_guesses += 1
+    display_score(correct_guesses);
 
-
+# !CALL TO SCOURCE CODE
 play(states_database)
+
+# // Responsible for constantn display of screen.
 turtle.mainloop()
+
 # does the same thing without exit on click
 # screen.exitonclick();
