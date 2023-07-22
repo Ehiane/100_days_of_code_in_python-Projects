@@ -1,5 +1,5 @@
 
-# SYNTAX : new_list = [<output> for <iterator> in <iterable> + <condition> ]
+# SYNTAX : new_list = [<output> for <iterator> in <iterable> + <condition> ] the condition is optional
 #! here are some list comprehension tactics
 file1_nums,file2_nums = [],[]; #initialise both lists.
 
