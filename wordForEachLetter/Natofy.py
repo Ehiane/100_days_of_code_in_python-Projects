@@ -8,13 +8,9 @@ def filter_database(database) -> dict:
     """
     refines the pandas dataframe into an actual dictionary without using read_toDict();
     """
-    list_of_lists = [];
-    phonetic_dict = {};
-    for (index,values) in database.iterrows(): #looped through the dataframe
-        list_of_lists.append(values.tolist()); #turned the series object to a list and added those values to a list.
-        for list_element in list_of_lists: #looped through the list of lists
-            phonetic_dict[list_element[0]] = list_element[1]; #created a new key pair for each letter and it's value
+    phonetic_dict = {row.letter: row.code for (index, row) in database.iterrows()}
     return phonetic_dict;
+
 
 
 def natofication(local_db) -> None:
