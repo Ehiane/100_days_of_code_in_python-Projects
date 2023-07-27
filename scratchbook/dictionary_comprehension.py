@@ -52,8 +52,25 @@ student_data_frame = pandas.DataFrame(student_dict);
 #     print(value);
 
 # inbuilt loop 
-for(index, row)in student_data_frame.iterrows():
-    # print(row,"\n");
-    # print(row.student,"\n"); #prints all the students
-    if row.student == "Angela":
-        print(row.score); #will print out angela's score.
+# for(index, row)in student_data_frame.iterrows():
+#     # print(row,"\n");
+#     # print(row.student,"\n"); #prints all the students
+#     if row.student == "Angela":
+#         print(row.score); #will print out angela's score.
+
+
+# Im trying to map a number to it's status(prime or no prime)
+numbers = [x for x in range(1,101)];
+
+def status(number):
+    """
+    Precondition: number argument > 1;
+    """
+    if number % 2 == 0:
+        return "Even";
+    else:
+        return "Odd"
+
+
+number_status_dict = {number:status(number) for number in numbers};
+print(number_status_dict);
