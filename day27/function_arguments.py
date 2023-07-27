@@ -1,0 +1,22 @@
+
+## Special Python Function arguments
+# * Default values -- very similar to c/c++
+# * "*args":
+"""
+!WITH THIS, YOU CAN PASS IN MULTIPLE AMOUNT OF ARGUMENTS, AND WHATEVER HAPPENS WILL BE PERFORMED
+!WITH A LOOP.
+
+def add(*args):
+    for n in args:
+        #do whatever!
+"""
+
+def add(*args):
+    result = 0;
+    for n in args:
+        result += n;
+    return result; 
+
+
+total = add(5,10,15,20,25,30,45,50,55,60); #doesn't work with lists.
+print(total);
