@@ -33,7 +33,6 @@ input = Entry(width=15);
 # input.pack();
 
 
-
 ## TK-INTER PLACEMENT MANAGERS
 # & PACK | PLACE  | GRID
 
@@ -43,21 +42,19 @@ input = Entry(width=15);
 #// editing the "mylabel" component. for .PLACE
 # myLabel.place(x=100,y=200);
 
-
 #// editing the "mylabel" component. for .GRID
 myLabel.grid(column=0,row=0);
 button.grid(column= 1, row= 1);
 input.grid(column=3,row=3);
 
-
-
+# // this was a challenge-- to add a new button at a specific position.
 new_button = Button(text="new-button");
 new_button.grid(column=2, row=0);
 
 # !YOU CAN'T USE GRID AND PACK IN THE SAME PROGRAM.
 
 
-
+## RESOURCES
 """
 #Creating a new window and configurations
 window = Tk()
@@ -143,7 +140,6 @@ listbox.bind("<<ListboxSelect>>", listbox_used)
 listbox.pack()
 
 """
-
 
 
 # keeps the window on the screen.
