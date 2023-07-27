@@ -37,10 +37,16 @@ def calculate(n, **kwargs):
 
 class Car:
     def __init__(self, **kw):
-        self.make = kw["make"];
-        self.model = kw["model"];
+        """
+        !USING THE '.get' FOR '**kwargs' WOULD 
+        !ALLOW YOU TO USE KWARGS OPTIONALLY
+        """
+        self.make = kw.get("make");
+        self.model = kw.get("model");
+        self.color = kw.get("color");
+        self.seats = kw.get("seats");
 
 
 my_car = Car(make = "Nissan", model= "GT-R");
-print(my_car.model)
-print(my_car.make)
+print(my_car.model);
+print(my_car.make);
