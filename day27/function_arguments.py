@@ -19,4 +19,28 @@ def add(*args):
 
 
 total = add(5,10,15,20,25,30,45,50,55,60); #doesn't work with lists.
-print(total);
+# print(total);
+
+
+# * '**kwargs':
+def calculate(n, **kwargs):
+    print(kwargs, type(kwargs)); #Data Structure: dictionary.
+
+    n += kwargs["add"];
+    n *= kwargs["multiply"];
+    print(n);
+
+# calculate(n = 2 ,add = 3, multiply=5);
+
+
+# trying to understand how to use **kwargs:
+
+class Car:
+    def __init__(self, **kw):
+        self.make = kw["make"];
+        self.model = kw["model"];
+
+
+my_car = Car(make = "Nissan", model= "GT-R");
+print(my_car.model)
+print(my_car.make)
