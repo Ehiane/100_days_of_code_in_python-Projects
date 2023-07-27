@@ -3,14 +3,13 @@ from tkinter import *
 
 window = Tk();
 window.title("My first GUI progrm");
-
 window.minsize(width=500, height=300);
+window.config(padx=20, pady=20); #adds padding
 
 
 ## TK-INTER WIDGETS
 
 #$ Label
-
 myLabel = Label(text="I am a label", font=("Arial", 24, "bold"));
 # myLabel.pack(); #place's the lablel to the screen and centers it by default.
 
@@ -19,6 +18,7 @@ myLabel.config(text="NEW TEXT");
 
 
 #$ BUTTON
+# function to perform when button is clicked.
 def button_clicked():
     new_text_prompt = input.get();
     myLabel.config(text=f"{new_text_prompt}");
@@ -28,7 +28,6 @@ button = Button(text="Click Me" ,command= button_clicked);
 # button.pack();
 
 #$ Entry/Input box
-
 input = Entry(width=15);
 # input.insert(END,string= "Enter a text")
 # input.pack();
@@ -38,8 +37,8 @@ input = Entry(width=15);
 ## TK-INTER PLACEMENT MANAGERS
 # & PACK | PLACE  | GRID
 
-# PACK -- by default centers widgest/components to the center and is sequential. hard to be precise
-# PLACE -- is more precise in positioning.
+#& PACK -- by default centers widgest/components to the center and is sequential. hard to be precise
+#& PLACE -- is more precise in positioning.
 
 #// editing the "mylabel" component. for .PLACE
 # myLabel.place(x=100,y=200);
