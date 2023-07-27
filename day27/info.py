@@ -1,6 +1,5 @@
 from tkinter import *
-
-#$ initialising the window.
+## initialising the window.
 
 window = Tk();
 window.title("My first GUI progrm");
@@ -13,12 +12,10 @@ window.minsize(width=500, height=300);
 #$ Label
 
 myLabel = Label(text="I am a label", font=("Arial", 24, "bold"));
-myLabel.pack(); #place's the lablel to the screen and centers it by default.
+# myLabel.pack(); #place's the lablel to the screen and centers it by default.
 
 myLabel["text"] = "New Text";
 myLabel.config(text="NEW TEXT");
-
-
 
 
 #$ BUTTON
@@ -28,14 +25,38 @@ def button_clicked():
 
 # the command attribute allows you map the button clicked event to a specific function.
 button = Button(text="Click Me" ,command= button_clicked);
-button.pack();
+# button.pack();
 
 #$ Entry/Input box
 
 input = Entry(width=15);
 # input.insert(END,string= "Enter a text")
-input.pack();
-new_text_prompt = input.get();
+# input.pack();
+
+
+
+## TK-INTER PLACEMENT MANAGERS
+# & PACK | PLACE  | GRID
+
+# PACK -- by default centers widgest/components to the center and is sequential. hard to be precise
+# PLACE -- is more precise in positioning.
+
+#// editing the "mylabel" component. for .PLACE
+# myLabel.place(x=100,y=200);
+
+
+#// editing the "mylabel" component. for .GRID
+myLabel.grid(column=0,row=0);
+button.grid(column= 1, row= 1);
+input.grid(column=3,row=3);
+
+
+
+new_button = Button(text="new-button");
+new_button.grid(column=2, row=0);
+
+# !YOU CAN'T USE GRID AND PACK IN THE SAME PROGRAM.
+
 
 
 """
@@ -72,7 +93,7 @@ text.focus()
 #Adds some text to begin with.
 text.insert(END, "Example of multi-line text entry.")
 #Get's current value in textbox at line 1, character 0
-print(text.get("1.0", END)) #1.0 text staring at the first line, with charcter at index 0 
+print(text.get("1.0", END)) 
 text.pack()
 
 #Spinbox
@@ -123,10 +144,6 @@ listbox.bind("<<ListboxSelect>>", listbox_used)
 listbox.pack()
 
 """
-
-
-
-
 
 
 
