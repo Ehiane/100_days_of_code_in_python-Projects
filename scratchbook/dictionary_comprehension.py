@@ -1,5 +1,6 @@
-# SYNTAX: new_dict = {<new_key>: <new_value> for <key> in <iterable> };
-# SYNTAX: new_dict = {<new_key>: <new_value> for (key,value) in dict.items() + <condition>};
+
+## SYNTAX: new_dict = {<new_key>: <new_value> for <key> in <iterable> };
+## SYNTAX: new_dict = {<new_key>: <new_value> for (key,value) in existing iterable.items() + <condition>};
 
 import random as r
 import pandas
