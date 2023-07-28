@@ -57,10 +57,13 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[🐿️🗃️🧮 |Day 25: analysingSquirrelData](analysingSquirrelData)**
 > Analysed a dataset from the newyork squirrel report in 2018 based on the color of squirrels present in the NewYork Area.
 
-**[🔤🎰 |Day 26: WordForEachLetter - NATOFICATION](wordForEachLetter)**
+**[🔤🎰 |Day 26 a: WordForEachLetter - NATOFICATION](wordForEachLetter)**
 > Generated a script that can help you during calls, for name pronounciations just type in your name and you'll have a word for each letter of your name.
 
-**[Km -> 🖩 <- m |Day 27: Miles to Kilometers Converter - Tkinter Application](m_to_km_Tkinter)**
+**[❓🗺️🌎|Day 26 b: U.S. States Game](usStatesGame)**
+> This Python Turtle program is a simple game that allows the user to guess the names of the U.S. states by typing the states' name in the dialog box.
+
+**[🚗<->🏎️ |Day 27: Miles to Kilometers Converter - Tkinter Application](m_to_km_Tkinter)**
 > Created a GUI program that converts miles to kilometer using the tkinter class.
 
 
