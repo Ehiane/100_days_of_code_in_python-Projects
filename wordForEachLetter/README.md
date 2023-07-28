@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Natofy is a Python script that allows users to convert words into their corresponding NATO phonetic alphabet representation. The NATO phonetic alphabet is a system used to clarify letters that may be easily misunderstood when communicated verbally. For example, "A" is represented as "Alfa," "B" as "Bravo," and so on.
+Natofy is a Python script that allows users to convert words into their corresponding NATO phonetic alphabet representation. The NATO phonetic alphabet is a system used to clarify letters that may be easily misunderstood when communicated verbally. For example, "A" is represented as "Alfa," "B" as "Bravo," and so on, I made use of Dictionary comprehension to manually convert the .csv file to a dictionary.
 
 ## How It Works
 
