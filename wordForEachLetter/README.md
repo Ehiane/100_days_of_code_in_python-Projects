@@ -1,4 +1,4 @@
-# WordForEachLetter - NATOFICATION
+# 🔤🎰 |WordForEachLetter - NATOFICATION
 <img width="500" alt="image" src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/eaac59ac-2920-44cb-945a-c41798690e72">
 
 
