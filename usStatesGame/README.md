@@ -1,6 +1,6 @@
 # ❓🗺️🌎|U.S. States Game 
 
-This Python Turtle program is a simple game that allows the user to guess the names of the U.S. states by clicking on their respective locations on a blank map. The program reads state data from a CSV file, displays the U.S. map, and prompts the user to guess the names of the states. If the user's guess is correct, the state name will be displayed on the map at its location. The game continues until the user guesses all 50 states or types "quit" to end the game.
+This Python Turtle program is a simple game that allows the user to guess the names of the U.S. states by typing the states' name in the dialog box. The program reads state data from a CSV file, displays the U.S. map, and prompts the user to guess the names of the states. If the user's guess is correct, the state name will be displayed on the map at its location. The game continues until the user guesses all 50 states or types "quit" to end the game.
 
 ## Demo
 <div align= "center">
