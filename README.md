@@ -69,12 +69,6 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 
 Special thanks to [Angla Yu](https://twitter.com/yu_angela) for bringing about the idea for this project through her [`100 days of code`](https://www.udemy.com/course/100-days-of-code/) course on Udemy
 
-The ASCII art used in the software's user interface is created using the `art` library.
-
-Note: The ASCII art in the README might not render properly on all platforms. Please refer to the actual source code files for accurate representations.
-
-Feel free to explore the source code and adapt it to your needs. Enjoy your coffee machine software!
-
 
 ## License
 
