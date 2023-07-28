@@ -51,9 +51,19 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[Day 23(🧢🪨) turtlecrossing🐢🛣️🚗](turtleCrossing)**
 > This project tested all my knowledge of the Turtle Graphics class  made me understand the need for reading documentation.
 
-
 **[📨🤖⌨️|Day 24: email Automation](emailAutomation)**
 > Manufactured a script that generates the same letter content to different people by using a list of names and sample text.
+
+**[🐿️🗃️🧮 |Day 25: analysingSquirrelData](analysingSquirrelData)**
+> Analysed a dataset from the newyork squirrel report in 2018 based on the color of squirrels present in the NewYork Area.
+
+**[🔤🎰 |Day 26: WordForEachLetter - NATOFICATION](wordForEachLetter)**
+> Generated a script that can help you during calls, for name pronounciations just type in your name and you'll have a word for each letter of your name.
+
+**[Km -> 🖩 <- m |Miles to Kilometers Converter - Tkinter Application](m_to_km_Tkinter)**
+> Created a GUI program that converts miles to kilometer using the tkinter class.
+
+
 
 ## Credits
 
