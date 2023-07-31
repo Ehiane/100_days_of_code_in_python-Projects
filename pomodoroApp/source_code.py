@@ -32,11 +32,10 @@ window = Tk();
 window.title("Pomodoro App");
 window.config(padx=100, pady=50, bg=GREEN);
 
-
 #   Using Canvas widget.
 canvas = Canvas(width=200, height=224, bg=GREEN, highlightthickness=0);
 
-#   instantiating the image object to the correct data type.
+#   instantiating the image to the correct data type.
 image_obj = PhotoImage(file=IMAGE);
 
 #   positioning the image on the canvas.(x=102,y=112)
@@ -44,6 +43,12 @@ canvas.create_image(100,112, image= image_obj);
 
 #   positioning the text on the canvas
 canvas.create_text(103,130, text="00:00", fill="white", font= FONT);
+
+"✔"
+#   using foreground(fg) element to edit color of text instead of background.
+
+
+
 
 #   displaying the changes regarding canvas. 
 canvas.pack();
