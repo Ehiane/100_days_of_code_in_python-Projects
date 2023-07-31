@@ -29,6 +29,11 @@ FONT = (FONT_NAME, 35, "bold");
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
+
+
+
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 ##   Window set-up;
 window = Tk();
@@ -48,11 +53,12 @@ canvas.create_image(100,112, image= image_obj);
 canvas.create_text(103,130, text="00:00", fill="white", font= FONT);
 
 
-#   using foreground(fg) element to edit color of text instead of background.
 
 ## Text(s)/Label(s):
+#% TIP: foreground/fg serves as the background for the specific element, like texts
+
 timer_label = Label(text="Timer", font= FONT, foreground=PINK, bg= GREEN);
-tick = Label(text="✔", foreground=PINK, background=GREEN);
+tick = Label(text="✔️", foreground=PINK, background=GREEN);
 
 ## Button(s):
 start_button = Button(text="Start", bg= PINK) #add command
