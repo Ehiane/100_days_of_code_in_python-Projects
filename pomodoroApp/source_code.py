@@ -29,7 +29,13 @@ FONT = (FONT_NAME, 35, "bold");
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
-
+#& Important function that takes duration of waiting, calls particular function, passing in the args.
+def count_down(count):
+    #& the .itemconfig method makes changes to a canvas element.
+    canvas.itemconfig(timer_text, text=count)
+    if count > 0:
+        #& the "count" is the argument(s) being passed into the function.
+        window.after(1000,count_down, count -1); 
 
 
 
@@ -39,6 +45,7 @@ FONT = (FONT_NAME, 35, "bold");
 window = Tk();
 window.title("Pomodoro App");
 window.config(padx=100, pady=50, bg=GREEN);
+
 
 #*   Using Canvas widget.
 canvas = Canvas(width=200, height=224, bg=GREEN, highlightthickness=0);
@@ -50,9 +57,10 @@ image_obj = PhotoImage(file=IMAGE);
 canvas.create_image(100,112, image= image_obj);
 
 #*   positioning the text on the canvas
-canvas.create_text(103,130, text="00:00", fill="white", font= FONT);
+timer_text = canvas.create_text(103,130, text="00:00", fill="white", font= FONT);
 
-
+#* calls function on line 33.
+count_down(10);
 
 ## Text(s)/Label(s):
 #% TIP: foreground/fg serves as the background for the specific element, like texts
@@ -63,9 +71,6 @@ tick = Label(text="✔️", foreground=PINK, background=GREEN);
 ## Button(s):
 start_button = Button(text="Start", bg= PINK) #add command
 reset_button = Button(text="Reset", bg= PINK) #add command
-
-
-
 
 ## Positioning:
 timer_label.grid(column=1, row=0);
