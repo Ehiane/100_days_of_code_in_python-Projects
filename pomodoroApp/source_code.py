@@ -39,12 +39,14 @@ def start_timer():
     #* calls function on line 33.
     global reps;
 
-    if reps == 8: 
+    if reps % 8 == 0: 
+        timer_label.config(text="Long Break",fg=YELLOW)
         count_down(LONG_BREAK_MIN*A_MINUTE);
-    
-    if not is_even(reps): #if at the 1st, 3rd , 5th or 7th rep 
+    elif not is_even(reps): #if at the 1st, 3rd , 5th or 7th rep 
+        timer_label.config(text="Work", fg="RED")
         count_down(WORK_MIN*A_MINUTE);
-    elif is_even(reps): #if at the 2nd, 3rd or 4th
+    else: #if at the 2nd, 3rd or 4th
+        timer_label.config(text="Short Break")
         count_down(SHORT_BREAK_MIN * A_MINUTE);
 
     reps += 1;
@@ -67,6 +69,8 @@ def count_down(count):
     if count > 0:
         #& the "count" is the argument(s) being passed into the function.
         window.after(1000,count_down, count -1); 
+    else:
+        start_timer();
 
 
 
@@ -99,8 +103,8 @@ timer_label = Label(text="Timer", font= FONT, foreground=PINK, bg= GREEN);
 tick = Label(text="✔️", foreground=PINK, background=GREEN);
 
 ## Button(s):
-start_button = Button(text="Start", bg= PINK, command= start_timer) #add command
-reset_button = Button(text="Reset", bg= PINK) #add command
+start_button = Button(text="Start", command= start_timer) #add command
+reset_button = Button(text="Reset") #add command
 
 ## Positioning:
 timer_label.grid(column=1, row=0);
