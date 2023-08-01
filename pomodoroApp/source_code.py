@@ -41,7 +41,7 @@ def reset_timer():
     # rest the timer_text, label and check marks:
     canvas.itemconfig(timer_text, text= "00:00", fill = "white", font = FONT);
     timer_label.config(text="timer", fg= PINK);
-    tick.config(text= "");
+    check_marks.config(text= "");
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
@@ -86,7 +86,7 @@ def count_down(count):
         start_timer();
         if reps %2 == 0:
            marks += "✔️"
-        tick.config(text= marks);
+        check_marks.config(text= marks);
 
 
 
@@ -116,7 +116,7 @@ timer_text = canvas.create_text(103,130, text="00:00", fill="white", font= FONT)
 #% TIP: foreground/fg serves as the background for the specific element, like texts
 
 timer_label = Label(text="Timer", font= FONT, foreground=PINK, bg= GREEN);
-tick = Label(text="", foreground=RED, background=GREEN);
+check_marks = Label(text="", foreground=RED, background=GREEN);
 
 ## Button(s):
 start_button = Button(text="Start", command= start_timer) 
@@ -127,7 +127,7 @@ timer_label.grid(column=1, row=0);
 canvas.grid(column=1,row=1);
 start_button.grid(column=0,row=2);
 reset_button.grid(column=2,row=2);
-tick.grid(column=1,row=3);
+check_marks.grid(column=1,row=3);
 
 
 
