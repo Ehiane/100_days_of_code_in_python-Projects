@@ -13,6 +13,8 @@ IMAGE = "pomodoroApp/tomato.png"
 FONT = (FONT_NAME, 35, "bold");
 A_MINUTE = 60;
 reps = 1;
+marks = "✔️";
+timer = None;
 
 
 #----------------------------- Functionality ----------------------------------#
@@ -33,6 +35,15 @@ def is_even(n):
 
 # ---------------------------- TIMER RESET ------------------------------- # 
 
+def reset_timer():
+    # this stops the timer
+    window.after_cancel(timer)
+    # rest the timer_text, label and check marks:
+    canvas.itemconfig(timer_text, text= "00:00", fill = "white", font = FONT);
+    timer_label.config(text="timer", fg= PINK);
+    tick.config(text= "");
+
+
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 
 def start_timer():
@@ -40,14 +51,14 @@ def start_timer():
     global reps;
 
     if reps % 8 == 0: 
-        timer_label.config(text="Long Break",fg=YELLOW)
-        count_down(LONG_BREAK_MIN*A_MINUTE);
+        timer_label.config(text="l Break",fg=YELLOW)
+        count_down(10);
     elif not is_even(reps): #if at the 1st, 3rd , 5th or 7th rep 
         timer_label.config(text="Work", fg="RED")
-        count_down(WORK_MIN*A_MINUTE);
+        count_down(10);
     else: #if at the 2nd, 3rd or 4th
-        timer_label.config(text="Short Break")
-        count_down(SHORT_BREAK_MIN * A_MINUTE);
+        timer_label.config(text="s Break", fg= PINK)
+        count_down(10);
 
     reps += 1;
 
@@ -57,8 +68,10 @@ def start_timer():
 #& Important function that takes duration of waiting, calls particular function, passing in the args.
 def count_down(count):
     #& the .itemconfig method makes changes to a canvas element.
+    global marks,timer;
     count_min = count // A_MINUTE;
     count_sec = count % A_MINUTE;
+    
 
     if count_sec <= 9:
         count_sec = f"0{count_sec}";
@@ -68,9 +81,12 @@ def count_down(count):
     #* Responsible for the time effect. 
     if count > 0:
         #& the "count" is the argument(s) being passed into the function.
-        window.after(1000,count_down, count -1); 
+        timer = window.after(1000,count_down, count -1); 
     else:
         start_timer();
+        if reps %2 == 0:
+           marks += "✔️"
+        tick.config(text= marks);
 
 
 
@@ -100,11 +116,11 @@ timer_text = canvas.create_text(103,130, text="00:00", fill="white", font= FONT)
 #% TIP: foreground/fg serves as the background for the specific element, like texts
 
 timer_label = Label(text="Timer", font= FONT, foreground=PINK, bg= GREEN);
-tick = Label(text="✔️", foreground=PINK, background=GREEN);
+tick = Label(text="", foreground=RED, background=GREEN);
 
 ## Button(s):
-start_button = Button(text="Start", command= start_timer) #add command
-reset_button = Button(text="Reset") #add command
+start_button = Button(text="Start", command= start_timer) 
+reset_button = Button(text="Reset", command= reset_timer) 
 
 ## Positioning:
 timer_label.grid(column=1, row=0);
