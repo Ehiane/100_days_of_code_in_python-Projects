@@ -31,17 +31,18 @@ timer = None;
 def is_even(n):
     return True if n % 2 == 0 else False;
 
-
-
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 def reset_timer():
+    global reps;
     # this stops the timer
     window.after_cancel(timer)
     # rest the timer_text, label and check marks:
     canvas.itemconfig(timer_text, text= "00:00", fill = "white", font = FONT);
     timer_label.config(text="timer", fg= PINK);
     check_marks.config(text= "");
+    reps = 0;
+
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
@@ -51,14 +52,14 @@ def start_timer():
     global reps;
 
     if reps % 8 == 0: 
-        timer_label.config(text="l Break",fg=YELLOW)
-        count_down(10);
+        timer_label.config(text="Break",fg=YELLOW)
+        count_down(LONG_BREAK_MIN * A_MINUTE);
     elif not is_even(reps): #if at the 1st, 3rd , 5th or 7th rep 
         timer_label.config(text="Work", fg="RED")
-        count_down(10);
+        count_down(WORK_MIN * A_MINUTE);
     else: #if at the 2nd, 3rd or 4th
-        timer_label.config(text="s Break", fg= PINK)
-        count_down(10);
+        timer_label.config(text="Break", fg= PINK)
+        count_down(SHORT_BREAK_MIN * A_MINUTE);
 
     reps += 1;
 
