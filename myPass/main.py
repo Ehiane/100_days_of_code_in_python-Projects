@@ -42,6 +42,8 @@ website_input = Entry(width=35,justify="left");
 userID_input = Entry(width=35,justify="left");
 password_input= Entry(width=21,justify="left");
 
+website_label.focus(); #! Sets the cursor to this entry at the start of the program.
+
 ##Button(s):
 generate_password_button = Button(text="Generate Password"); #add command
 add_button= Button(text="Add", width=36); #add command
