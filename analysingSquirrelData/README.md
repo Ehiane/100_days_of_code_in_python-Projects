@@ -1,7 +1,8 @@
 # 🐿️🗃️🧮 |analysingSquirrelData
 
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](analysingSquirrelData/blob/master/LICENSE)
-![Squirrel Shocked GIF - Squirrel Shocked Shock - Discover   Share GIFs](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/b330f225-8d78-4e3b-ae0f-43ee249861a3)
+![squirrelscream](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/7510f993-3c3d-4150-a40b-706d840f754a)
+
 
 
 ## Squirrel Fur Color Analysis
