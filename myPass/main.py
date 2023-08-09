@@ -18,6 +18,31 @@ FONT = ("Courier",12);
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
+# # Check out delete function to clear all entries except the default user/email text.
+
+def save_prog_data():
+    website = website_input.get();
+    email_username = userID_input.get();
+    password = password_input.get();
+    return website,email_username, password;
+
+def clear_entries():
+    website_input.delete(0,END);
+    password_input.delete(0,END);
+
+def save_to_file(filename = "data.txt"):
+    # convert data to list
+    user_data = list(save_prog_data());
+    content = f"{user_data[0]} | {user_data[1]} | {user_data[2]}\n";
+
+    # write to file
+    with open(filename, "a") as file:
+        file.write(content);
+        print("Sucessfully written to file")
+    # clearing unwanted entries.
+    clear_entries();
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 ##Window setup:
 window = Tk();
@@ -41,12 +66,14 @@ password_label = Label(text="Password:",font= FONT);
 website_input = Entry(width=35,justify="left");
 userID_input = Entry(width=35,justify="left");
 password_input= Entry(width=21,justify="left");
+userID_input.insert(0, "ehis.oigigagbe@gmail.com") #*END is a constant that represents the very last character of the entry, 0 is the beginnig
 
 website_label.focus(); #! Sets the cursor to this entry at the start of the program.
 
+
 ##Button(s):
 generate_password_button = Button(text="Generate Password"); #add command
-add_button= Button(text="Add", width=36); #add command
+add_button= Button(text="Add", width=36,command=save_to_file); #add command
 
 
 ##Element positioning:
@@ -59,6 +86,7 @@ password_input.grid(column=1, row=3);
 password_label.grid(column=0,row=3);
 generate_password_button.grid(column=2,row=3);
 add_button.grid(column=1, row=4, columnspan=2);
+
 
 
 window.mainloop();
