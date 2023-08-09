@@ -17,9 +17,6 @@ FONT = ("Courier",12);
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-
-# # Check out delete function to clear all entries except the default user/email text.
-
 def save_prog_data():
     website = website_input.get();
     email_username = userID_input.get();
