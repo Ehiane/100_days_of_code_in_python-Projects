@@ -2,7 +2,14 @@
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](analysingSquirrelData/blob/master/LICENSE)
 
 ## Demo
-https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/1e483d13-5129-4119-9c09-86fbcf4f69b1
+
+
+<div align="center">
+   <video src="https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/99c2ff5c-1f0f-47c7-9692-7063274d2546" width="700">
+</div>
+
+
+
 
 
 
