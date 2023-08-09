@@ -6,9 +6,9 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
-SHORT_BREAK_MIN = 5
-LONG_BREAK_MIN = 20
+WORK_MIN = 1
+SHORT_BREAK_MIN = 1
+LONG_BREAK_MIN = 1
 IMAGE = "pomodoroApp/tomato.png"
 FONT = (FONT_NAME, 35, "bold");
 A_MINUTE = 60;
@@ -53,13 +53,13 @@ def start_timer():
 
     if reps % 8 == 0: 
         timer_label.config(text="Break",fg=YELLOW)
-        count_down(LONG_BREAK_MIN * A_MINUTE);
+        count_down(LONG_BREAK_MIN * 30);
     elif not is_even(reps): #if at the 1st, 3rd , 5th or 7th rep 
         timer_label.config(text="Work", fg="RED")
-        count_down(WORK_MIN * A_MINUTE);
+        count_down(WORK_MIN * 30);
     else: #if at the 2nd, 3rd or 4th
         timer_label.config(text="Break", fg= PINK)
-        count_down(SHORT_BREAK_MIN * A_MINUTE);
+        count_down(SHORT_BREAK_MIN * 30);
 
     reps += 1;
 
