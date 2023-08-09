@@ -15,40 +15,37 @@ from tkinter import messagebox as m;
 
 # %Global(s):
 LOGO = "logo.png"
+DATABASE = "data.txt";
 FONT = ("Courier",12);
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_prog_data():
-    website = website_input.get();
-    email_username = userID_input.get();
-    password = password_input.get();
-
-    pop_up_messg = f"These are the details entered: \nEmail: {email_username}\nPassword: {password} \nIs it ok to save?";
-
-    is_okay = m.askokcancel(title=website, message=f"{pop_up_messg}")
+    website,email_username,password = website_input.get(), userID_input.get(), password_input.get();
     
-    if is_okay:
-        return website,email_username, password;
-    else: 
-        pass
+    if website == "" or password == "":
+        m.showinfo(title="Error!", message="Please don't leave any field empty!");
+    else:
+        pop_up_messg = f"These are the details entered: \nEmail: {email_username}\nPassword: {password} \nIs it ok to save?";
+        # verifiying if user is satisfied with given details.
+        is_okay = m.askokcancel(title=website, message=f"{pop_up_messg}")
+        if is_okay:
+            return website,email_username, password;
+
 
 def clear_entries():
     website_input.delete(0,END);
     password_input.delete(0,END);
 
-def save_to_file(filename = "data.txt"):
-    # convert data to list
-    user_data = save_prog_data(); 
 
+def save_to_file(filename = DATABASE):
+    user_data = save_prog_data(); 
     if user_data != None:
         content = f"{user_data[0]} | {user_data[1]} | {user_data[2]}\n";
         # write to file
         with open(filename, "a") as file:
             file.write(content);
             m.showinfo(title="Password Manager", message="Successfully Saved Info!");
-            # print("Sucessfully written to file")
-
         # clearing unwanted entries.
         clear_entries();
     else:
