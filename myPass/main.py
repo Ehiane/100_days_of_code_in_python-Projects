@@ -33,15 +33,13 @@ password_list =  [random.choice(letters) for char in range(nr_letters)];
 password_list += [random.choice(symbols) for symb in range(nr_symbols)];
 password_list += [random.choice(numbers) for num in range(nr_numbers)];
 
-
 random.shuffle(password_list);
 
 password = "";
 for char in password_list:
-  password += char
+  password += char;
 
-print(f"Your password is: {password}")
-
+print(f"Your password is: {password}");
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_prog_data():
     website,email_username,password = website_input.get(), userID_input.get(), password_input.get();
