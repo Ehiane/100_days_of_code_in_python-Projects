@@ -9,7 +9,9 @@
 # # Now you can import the module
 # from passwordGenerator.complexPasswordGenerator import random_password_generator
 
-from tkinter import *
+from tkinter import * #only imports classes but not regular functions 
+from tkinter import messagebox as m;
+
 
 # %Global(s):
 LOGO = "logo.png"
@@ -21,7 +23,15 @@ def save_prog_data():
     website = website_input.get();
     email_username = userID_input.get();
     password = password_input.get();
-    return website,email_username, password;
+
+    pop_up_messg = f"These are the details entered: \nEmail: {email_username}\nPassword: {password} \nIs it ok to save?";
+
+    is_okay = m.askokcancel(title=website, message=f"{pop_up_messg}")
+    
+    if is_okay:
+        return website,email_username, password;
+    else: 
+        pass
 
 def clear_entries():
     website_input.delete(0,END);
@@ -29,15 +39,20 @@ def clear_entries():
 
 def save_to_file(filename = "data.txt"):
     # convert data to list
-    user_data = list(save_prog_data());
-    content = f"{user_data[0]} | {user_data[1]} | {user_data[2]}\n";
+    user_data = save_prog_data(); 
 
-    # write to file
-    with open(filename, "a") as file:
-        file.write(content);
-        print("Sucessfully written to file")
-    # clearing unwanted entries.
-    clear_entries();
+    if user_data != None:
+        content = f"{user_data[0]} | {user_data[1]} | {user_data[2]}\n";
+        # write to file
+        with open(filename, "a") as file:
+            file.write(content);
+            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+            # print("Sucessfully written to file")
+
+        # clearing unwanted entries.
+        clear_entries();
+    else:
+        print("couldn't save to file");
 
 
 # ---------------------------- UI SETUP ------------------------------- #
