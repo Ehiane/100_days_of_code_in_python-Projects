@@ -3,7 +3,6 @@ import pandas
 #! NATOFY: to use other words to clarify a letter that has been said:
 #! example: A- Apple, B- Ball, etc  
 
-# !THERE'S PROBABLY A MORE EFFICIENT WAY OF DOING THIS:
 def filter_database(database) -> dict:
     """
     refines the pandas dataframe into an actual dictionary without using read_toDict();
@@ -21,8 +20,14 @@ def natofication(local_db) -> None:
     word_to_natofy = word_to_natofy.replace(" ", "");
     print(word_to_natofy);
     for letter in word_to_natofy:
-        natofied_word = local_db[letter];
-        print(f"{letter} for {natofied_word}")
+        ## Added exception handling 2 weeks later. 
+        try:
+            natofied_word = local_db[letter];
+        except:
+            print("Sorry, only letter in the alphabet please.");
+            break;
+        else:
+            print(f"{letter} for {natofied_word}")
 
 
 def run_program():
