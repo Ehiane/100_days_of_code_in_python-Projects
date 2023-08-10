@@ -1,12 +1,14 @@
+
+#$ Imports(s):
 from tkinter import * #only imports classes but not regular functions 
 from tkinter import messagebox as m;
 from random import randint ,shuffle, choice;
 import pyperclip; #!responsible for copying to clipboard
-
+import json
 
 # %Global(s):
 LOGO = "logo.png"
-DATABASE = "data.txt";
+DATABASE = "data.json";
 FONT = ("Courier",12);
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 # Password Generator Project
@@ -38,11 +40,14 @@ def save_prog_data():
     if website == "" or password == "":
         m.showinfo(title="Error!", message="Please don't leave any field empty!");
     else:
-        pop_up_messg = f"These are the details entered: \nEmail: {email_username}\nPassword: {password} \nIs it ok to save?";
-        # verifiying if user is satisfied with given details.
-        is_okay = m.askokcancel(title=website, message=f"{pop_up_messg}")
-        if is_okay:
-            return website,email_username, password;
+        #! using json format.
+        new_data = {
+            website: {
+                "email": email_username,
+                "password": password,
+            }
+        }
+        return new_data;
 
 
 def clear_entries():
@@ -52,11 +57,19 @@ def clear_entries():
 
 def save_to_file(filename = DATABASE):
     user_data = save_prog_data(); 
+    
     if user_data != None:
-        content = f"'{user_data[0]}' | '{user_data[1]}' | '{user_data[2]}'\n";
-        # write to file
-        with open(filename, "a") as file:
-            file.write(content);
+        with open(filename, "r") as file:
+            #! using json format.
+                ## How to insert data to a json file.
+                #! change file read mode to "w" 
+            # json.dump(obj= user_data, fp=file, indent=4) #requires what you need to store and the file and indent(optional)
+
+                ## How to read data from a json file.
+                #! change file read mode to "r"  
+            dummy_data = json.load(file); #converts to a python dict.
+            print(dummy_data, type(dummy_data));
+
             m.showinfo(title="Password Manager", message="Successfully Saved Info!");
         # clearing unwanted entries.
         clear_entries();
