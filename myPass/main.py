@@ -59,18 +59,20 @@ def save_to_file(filename = DATABASE):
     user_data = save_prog_data(); 
     
     if user_data != None:
+        ## How to read data from a json file. 
+        # ! change file mode to "r" 
+
         with open(filename, "r") as file:
-            #! using json format.
-                ## How to insert data to a json file.
-                #! change file read mode to "w" 
-            # json.dump(obj= user_data, fp=file, indent=4) #requires what you need to store and the file and indent(optional)
+            new_data = json.load(file) #requires what you need to store and the file and indent(optional)
+            new_data.update(user_data);
 
-                ## How to read data from a json file.
-                #! change file read mode to "r"  
-            dummy_data = json.load(file); #converts to a python dict.
-            print(dummy_data, type(dummy_data));
+        ## How to insert data from a json file. 
+        # ! change file mode to "w"
 
-            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+        with open(filename, "w") as file:
+            json.dump(new_data, file, indent=4);
+        
+        m.showinfo(title="Password Manager", message="Successfully Saved Info!");
         # clearing unwanted entries.
         clear_entries();
     else:
