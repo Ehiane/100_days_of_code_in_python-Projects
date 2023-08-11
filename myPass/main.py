@@ -59,23 +59,25 @@ def save_to_file(filename = DATABASE):
     user_data = save_prog_data(); 
     
     if user_data != None:
-        ## How to read data from a json file. 
-        # ! change file mode to "r" 
 
-        with open(filename, "r") as file:
-            new_data = json.load(file) #requires what you need to store and the file and indent(optional)
-            # updating the data.
-            new_data.update(user_data);
+        #open the file and see if there's anything in side
+        try: 
+            with open(filename, "r") as file:
+                new_data = json.load(file);
+        #if file not found, create a new file and dump the old data there
+        except FileNotFoundError: 
+            with open(filename, "w") as file:
+                json.dump(user_data, file, indent=4);
+        #if file is found, update the file with the new data.
+        else: 
+              with open(filename, "w") as file:
+                new_data.update(user_data);
+        # Regardless of the outcome, do this:
+        finally:
+            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+            # clearing unwanted entries.
+            clear_entries();
 
-        ## How to insert data from a json file. 
-        # ! change file mode to "w"
-
-        with open(filename, "w") as file:
-            json.dump(new_data, file, indent=4);
-        
-        m.showinfo(title="Password Manager", message="Successfully Saved Info!");
-        # clearing unwanted entries.
-        clear_entries();
     else:
         print("couldn't save to file");
 
