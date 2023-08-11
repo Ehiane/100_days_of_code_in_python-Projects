@@ -117,6 +117,24 @@ def save_to_file(filename=DATABASE):
 
 # ---------------------------- SEARCH ------------------------------- #
 def search_file(filname = DATABASE):
+  
+    try:
+        with open(filname, "r") as file:
+            data_copy = json.load(file); #data_copy is in dict form now
+    except FileNotFoundError:
+        m.showinfo(title="error", message="No Data file found.");
+    except json.decoder.JSONDecodeError:
+        m.showinfo(title="error", message="Data file is empty");
+    else:
+        query = website_input.get();
+        query_email = data_copy[query]['email'];
+        query_password = data_copy[query]['password'];
+        m.showinfo(title=query, message=f"email: {query_email} \npassword: {query_password} ");
+    finally:
+        clear_entries();
+
+
+
     pass;
 
 
