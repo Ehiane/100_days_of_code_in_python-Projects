@@ -64,6 +64,7 @@ def save_to_file(filename = DATABASE):
 
         with open(filename, "r") as file:
             new_data = json.load(file) #requires what you need to store and the file and indent(optional)
+            # updating the data.
             new_data.update(user_data);
 
         ## How to insert data from a json file. 
