@@ -64,17 +64,35 @@ def save_to_file(filename = DATABASE):
         try: 
             with open(filename, "r") as file:
                 new_data = json.load(file);
+                print("test1: trying to read data")
+
+                if new_data != None:
+                #if file is found, update the file with the new data.
+                    new_data.update(user_data);
+                    print("test2: trying to update the data")
+                    with open(filename, "w") as file:
+                        json.dump(new_data,file, indent=4);
+                        print("test3: added updated data to the file.\n*******************")
+                    m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+
         #if file not found, create a new file and dump the old data there
         except FileNotFoundError: 
+            print("test1.1: couldn't read data")
             with open(filename, "w") as file:
                 json.dump(user_data, file, indent=4);
-        #if file is found, update the file with the new data.
-        else: 
-              with open(filename, "w") as file:
-                new_data.update(user_data);
+                print("test1.2: creating new file\n*******************");
+            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+        
+        #if file found but empty, create a new file and dump the old data there
+        except json.decoder.JSONDecodeError:
+            print("test1.11: couldn't read data")
+            with open(filename, "w") as file:
+                json.dump(user_data, file, indent=4);
+                print("test1.12: creating new file\n*******************");
+            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
+
         # Regardless of the outcome, do this:
         finally:
-            m.showinfo(title="Password Manager", message="Successfully Saved Info!");
             # clearing unwanted entries.
             clear_entries();
 

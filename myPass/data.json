@@ -1,6 +1,22 @@
 {
-    "amazon.com": {
-        "email": "ehis.oigiagbe@gmail.com",
-        "password": ")UFFSgT%v5*l&438VW"
+    "amazon": {
+        "email": "user@email.com",
+        "password": "(x!$Q2kpIHWPH1"
+    },
+    "twitch": {
+        "email": "user@email.com",
+        "password": "UCp#2b!i&*3j0ZJ"
+    },
+    "rumble": {
+        "email": "user@email.com",
+        "password": "l1*O6R)dL0mhot0!"
+    },
+    "kick": {
+        "email": "user@email.com",
+        "password": "Q$e6nMLy+74UgN"
+    },
+    "netflix": {
+        "email": "user@email.com",
+        "password": "F4No6X*hv)eK5"
     }
 }
