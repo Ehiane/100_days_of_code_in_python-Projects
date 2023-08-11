@@ -69,7 +69,7 @@ Welcome to my repository for the projects completed during my "100 Days of Code 
 **[🍅⏱️📱|Day 28: Pomodoro Timer App](pomodoroApp)**
 > Developed and Replicated the famous Pomodoro Time method with Tkinter GUI. This program offers efficient time management solutions and is multipurpose.
 
-**[🔑👩‍💼📚|Day 29: myPass -Password Manager](myPass)**
+**[🔑👩‍💼📚|Day 29 & 30: myPass -Password Manager](myPass)**
 > Designed a GUI-based password manager enabling automatic password generation and clipboard-saving for user convenience.
 
 
