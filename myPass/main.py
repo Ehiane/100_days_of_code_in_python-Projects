@@ -46,7 +46,7 @@ def generate_password():
 def save_prog_data():
     website, email_username, password = (
         website_input.get(),
-        userID_input.get(),
+        email_input.get(),
         password_input.get(),
     )
 
@@ -118,10 +118,10 @@ def save_to_file(filename=DATABASE):
         print("couldn't save to file")
 
 # ---------------------------- SEARCH ------------------------------- #
-def search_file(filname = DATABASE):
+def search_file(filename = DATABASE):
   
     try:
-        with open(filname, "r") as file:
+        with open(filename, "r") as file:
             data_copy = json.load(file); #data_copy is in dict form now
     except FileNotFoundError:
         m.showinfo(title="error", message="No Data file found.");
@@ -137,6 +137,22 @@ def search_file(filname = DATABASE):
             m.showinfo(title="error", message=f"'{query}' not found in database");
     finally:
         clear_entries();
+
+# ---------------------------- SHOW ALL ------------------------------- #
+def show_all(filename = DATABASE):
+    prompt = "";
+    try:
+        with open(filename, "r") as file:
+            copy = json.load(file);
+    except FileNotFoundError:
+        m.showinfo(title="error", message="No Data file found.");
+    except json.decoder.JSONDecodeError:
+        m.showinfo(title="error", message="Data file is empty");
+    else:
+        for key, value in copy.items():
+            prompt += f"{key}:\n{value} \n";
+        m.showinfo(title="Password Manager", message=prompt);
+
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -155,14 +171,14 @@ canvas.create_image(100, 100, image=logo_obj)
 
 ##Label(s):
 website_label = Label(text="Website:", font=FONT)
-userID_label = Label(text="Email:", font=FONT)
+email_label = Label(text="Email:", font=FONT)
 password_label = Label(text="Password:", font=FONT)
 
 ##Entry(s):
-website_input = Entry(width=35, justify="left")
-userID_input = Entry(width=35, justify="left")
-password_input = Entry(width=21, justify="left")
-userID_input.insert(
+website_input = Entry(width=21)
+email_input = Entry(width=21)
+password_input = Entry(width=21)
+email_input.insert(
     0, "user@email.com"
 )  # *END is a constant that represents the very last character of the entry, 0 is the beginnig
 
@@ -174,20 +190,22 @@ website_label.focus()
 generate_password_button = Button(text="Generate Password", command=generate_password)
 add_button = Button(text="Add", width=36, command=save_to_file)
 search_button = Button(text="Search", command=search_file, width=15);
+# show_button = Button(text="showall", command=show_all, width=15);
 
 
 ## Element positioning:
 canvas.grid(column=1, row=0)
-website_label.grid(column=0, row=1,padx=0,pady=0)
-website_input.grid(column=1, row=1, columnspan=2,padx=0,pady=0)
-userID_label.grid(column=0, row=2,padx=0,pady=0)
-userID_input.grid(column=1, row=2, columnspan=2,padx=0,pady=0)
-password_label.grid(column=0, row=3,padx=0,pady=0)
-password_input.grid(column=1, row=3,padx=0,pady=0)
+website_label.grid(column=0, row=1)
+website_input.grid(column=1,row=1)
+email_label.grid(column=0, row=2)
+email_input.grid(column=1, row=2)
+# show_button.grid(column=2, row=2);
+password_label.grid(column=0, row=3)
+password_input.grid(column=1, row=3)
 # Update the grid position
-generate_password_button.grid(column=2, row=3,padx=0,pady=0)
-add_button.grid(column=1, row=4, columnspan=2,padx=0,pady=0)
-search_button.grid(column=3, row=1,padx=0,pady=0);
+generate_password_button.grid(column=2, row=3)
+add_button.grid(column=1, row=4, columnspan=2)
+search_button.grid(column=2, row=1);
 
 
 window.mainloop()
