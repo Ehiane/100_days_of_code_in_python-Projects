@@ -80,10 +80,12 @@ def save_to_file(filename=DATABASE):
 
                 if new_data != None:
                     # if file is found, update the file with the new data.
+                    new_data.update(user_data);
                     print(new_data)
                     print("test2: trying to update the data")
                     with open(filename, "w") as file:
                         json.dump(new_data, file, indent=4)
+
                         print(
                             "test3: added updated data to the file.\n*******************"
                         )
@@ -127,15 +129,14 @@ def search_file(filname = DATABASE):
         m.showinfo(title="error", message="Data file is empty");
     else:
         query = website_input.get();
-        query_email = data_copy[query]['email'];
-        query_password = data_copy[query]['password'];
-        m.showinfo(title=query, message=f"email: {query_email} \npassword: {query_password} ");
+        try:
+            query_email = data_copy[query]['email'];
+            query_password = data_copy[query]['password'];
+            m.showinfo(title=query, message=f"email: {query_email} \npassword: {query_password} ");
+        except KeyError:
+            m.showinfo(title="error", message=f"'{query}' not found in database");
     finally:
         clear_entries();
-
-
-
-    pass;
 
 
 # ---------------------------- UI SETUP ------------------------------- #
