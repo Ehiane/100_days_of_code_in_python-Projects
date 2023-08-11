@@ -68,9 +68,9 @@ def clear_entries():
     password_input.delete(0, END)
 
 
+#! .load() -> python(dict) 
 def save_to_file(filename=DATABASE):
     user_data = save_prog_data()
-
     if user_data != None:
         # open the file and see if there's anything in side
         try:
@@ -80,7 +80,7 @@ def save_to_file(filename=DATABASE):
 
                 if new_data != None:
                     # if file is found, update the file with the new data.
-                    new_data.update(user_data)
+                    print(new_data)
                     print("test2: trying to update the data")
                     with open(filename, "w") as file:
                         json.dump(new_data, file, indent=4)
@@ -114,6 +114,10 @@ def save_to_file(filename=DATABASE):
 
     else:
         print("couldn't save to file")
+
+# ---------------------------- SEARCH ------------------------------- #
+def search_file(filname = DATABASE):
+    pass;
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -149,22 +153,22 @@ website_label.focus()
 
 ##Button(s):
 generate_password_button = Button(text="Generate Password", command=generate_password)
-# add command
 add_button = Button(text="Add", width=36, command=save_to_file)
-# add command
+search_button = Button(text="Search", command=search_file, width=15);
 
 
 ## Element positioning:
 canvas.grid(column=1, row=0)
-website_label.grid(column=0, row=1)
-website_input.grid(column=1, row=1, columnspan=2)
-userID_label.grid(column=0, row=2)
-userID_input.grid(column=1, row=2, columnspan=2)
-password_label.grid(column=0, row=3)
-password_input.grid(column=1, row=3)
+website_label.grid(column=0, row=1,padx=0,pady=0)
+website_input.grid(column=1, row=1, columnspan=2,padx=0,pady=0)
+userID_label.grid(column=0, row=2,padx=0,pady=0)
+userID_input.grid(column=1, row=2, columnspan=2,padx=0,pady=0)
+password_label.grid(column=0, row=3,padx=0,pady=0)
+password_input.grid(column=1, row=3,padx=0,pady=0)
 # Update the grid position
-generate_password_button.grid(column=2, row=3)
-add_button.grid(column=1, row=4, columnspan=2)
+generate_password_button.grid(column=2, row=3,padx=0,pady=0)
+add_button.grid(column=1, row=4, columnspan=2,padx=0,pady=0)
+search_button.grid(column=3, row=1,padx=0,pady=0);
 
 
 window.mainloop()
