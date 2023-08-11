@@ -1,6 +1,6 @@
 ![giphy](https://github.com/Ehiane/100_days_of_code_in_python-Projects/assets/79903725/fd7d845b-9b85-48a5-9378-e17fa29d498e)
 
-
+[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](analysingSquirrelData/blob/master/LICENSE)
 
 # [ 🔗: 100_days_of_code_in_python-Projects](https://github.com/Ehiane/100_days_of_code_in_python-Projects/tree/main)
 
