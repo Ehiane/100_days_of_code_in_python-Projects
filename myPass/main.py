@@ -23,7 +23,7 @@ def generate_password():
     numbers = [str(x) for x in range(10)]  # number from 1 - 10 using list comprehension
     symbols = [
         chr(x) for x in [33, 35, 36, 37, 38, 40, 41, 42, 43]
-    ]  # converting ascii characters of symbols to characters using list comprehension. ;
+    ]  # converting asc ii characters of symbols to characters using list comprehension. ;
 
     password_list = [choice(letters) for _ in range(randint(8, 10))]
     password_list += [choice(symbols) for _ in range(randint(2, 4))]
