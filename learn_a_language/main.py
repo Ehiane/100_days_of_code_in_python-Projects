@@ -38,6 +38,15 @@ unknown_words = {};
 ##---------------------------------------------------- FUNCTIONS -------------------------------------------------------#
 
 def pick_random_data(filename = SOURCE):
+    """
+    Pick a random pair of words from the data file and return them.
+
+    Args:
+        filename (str): The path to the CSV data file.
+
+    Returns:
+        str, str: A tuple containing the randomly chosen foreign word and its translation.
+    """
     global foreign_word, base_word, local_db;
     db = pandas.read_csv(filename);
     
@@ -54,6 +63,9 @@ def pick_random_data(filename = SOURCE):
 
 
 def display_random_pair():
+    """
+    Display a random word pair on the UI.
+    """
     foreign, base = pick_random_data();
     
 
@@ -62,6 +74,9 @@ def display_random_pair():
 
 
 def change_card_toFront():
+    """
+    Change the displayed card to the front side, showing the base language word.
+    """
     global Timer;
 
     if Timer:
@@ -77,6 +92,9 @@ def change_card_toFront():
 
 
 def change_card_toBack():
+    """
+    Change the displayed card to the back side, showing the foreign language word.
+    """
     global Timer, current_word_combo;
 
     # cancel existing timer.
@@ -99,19 +117,31 @@ def change_card_toBack():
 
 def flip_card(filename = SOURCE):
     """
-    this will be called after the timer expires.
+    Flip the card to show the opposite side after the timer expires.
     """
     global card,display_language,display_word,base_languange;
     change_card_toFront();
 
 
 def start_timer(time_allowed):
+    """
+    Start the countdown timer with the given time allowance.
+
+    Args:
+        time_allowed (int): The time in seconds for the timer.
+    """
     global Timer
     canvas.itemconfig(timer_text, text=f"0:{time_allowed:02}")
     Timer = window.after(1000, timer, time_allowed)
 
 
 def timer(time_allowed):
+    """
+    Update the timer display and call flip_card when the timer reaches zero.
+
+    Args:
+        time_allowed (int): The remaining time on the timer.
+    """
     global Timer
     sec = time_allowed % 60
     if time_allowed > 0:
@@ -123,6 +153,9 @@ def timer(time_allowed):
 
 
 def user_knows():
+    """
+    Handle actions when the user knows the word, update data and UI.
+    """
     global known_words, local_db
     foreign, base = current_word_combo
 
@@ -136,6 +169,9 @@ def user_knows():
 
 
 def user_not_know():
+    """
+    Handle actions when the user does not know the word, update data and UI.
+    """
     global unknown_words
     foreign, base = current_word_combo
 
@@ -149,6 +185,13 @@ def user_not_know():
 
 
 def save_to_file(filename,dictionary):
+    """
+    Save the given dictionary data to a CSV file.
+
+    Args:
+        filename (str): The path to the CSV file.
+        dictionary (dict): The dictionary to be saved.
+    """
     # reformating the dictionary to be acceptable for conversion to csv.
     raw_data = {'Igbo': list(dictionary.keys()),
                 'English': list(dictionary.values())
