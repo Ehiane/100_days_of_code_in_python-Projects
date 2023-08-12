@@ -91,7 +91,7 @@ def change_card_toFront():
     # changing the text:
     canvas.itemconfig(display_language, text=f"{base_languange}");
     canvas.itemconfig(display_word, text=f"{base}");
-    timer();
+
 
 def change_card_toBack():
     """
