@@ -84,9 +84,6 @@ def change_card_toFront():
     global current_word_combo;
 
     foreign, base = current_word_combo;
-
- 
-
     # changing the card type:
     card.configure(file=FRONT);
     canvas.itemconfig(current_card,image=card)
