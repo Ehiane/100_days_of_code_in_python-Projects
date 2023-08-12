@@ -5,6 +5,7 @@ import random as r;
 import pandas;
 
 # %Global(s):
+#   *---UnMutable----# 
 BACKGROUND_COLOR = "#B1DDC6"
 FRONT = "images/card_front.png";
 BACK = "images/card_back.png";
@@ -12,7 +13,22 @@ RIGHT = "images/right.png";
 WRONG = "images/wrong.png";
 TITLE_FONT = ("Ariel",60,"bold");
 SUB_TITLE_FONT = ("Ariel", 40, "italic");
-SOURCE = "data/igbo_words.csv"
+SOURCE = "data/igbo_words.csv";
+
+starter_words = {
+    "chi":"goddess",
+    "efulefu": "zero",
+    "egwugwu": "hardware",
+    "ekwe": "allow"
+}
+
+#   *---Mutable----# 
+foreign_language = "igbo";
+base_languange = "english";
+# ! this will change periodically
+foreign_word, base_word = r.choice(list(starter_words.items()));
+
+
 
 # --------------------- UI SET-UP ------------------------#
 ##Window setup:
@@ -29,14 +45,16 @@ card = PhotoImage(file=BACK)
 canvas.create_image(400, 275, image=card)
 
 ##Label(s):
-foreign_language = "french";
-canvas.create_text(400,150, text=f"{foreign_language.capitalize()}", fill="black", font=SUB_TITLE_FONT);
+display_foreign_language = canvas.create_text(400,150, text=f"{foreign_language.capitalize()}", fill="black", font=SUB_TITLE_FONT);
+display_foreign_word = canvas.create_text(400,263, text=f"{foreign_word}", fill="black", font=TITLE_FONT);
 
-# ! this will change periodically
-foreign_word = "trouve";
-canvas.create_text(400,263, text=f"{foreign_word}", fill="black", font=TITLE_FONT);
+# display_base_language = canvas.create_text(400,150, text=f"{base_language.capitalize()}", fill="black", font=SUB_TITLE_FONT);
+# display_base_word = canvas.create_text(400,263, text=f"{base_word}", fill="black", font=TITLE_FONT);
+
+
 
 def pick_random_data(filename = SOURCE):
+    global foreign_word, base_word;
     db = pandas.read_csv(filename);
     
     # local_db = db.to_dict(orient='records');
@@ -47,21 +65,24 @@ def pick_random_data(filename = SOURCE):
 
     #pick a random pair from local_db; 
     chosen_pair = r.choice(list(local_db.items())); #returns a tuple.
-    temp_foreign_word, temp_english_word = chosen_pair;
-    
-    return temp_foreign_word, temp_english_word;
-    
-    pass;
+    foreign_word, base_word = chosen_pair;
 
-pick_random_data();
+    canvas.itemconfigure(display_foreign_word, text=f"{foreign_word}");
+    # canvas.itemconfigure(display_base_word, text=f"{base_word}");
+
+
+
+
+    
+
+
 
 ##Button(s):
 right_image = PhotoImage(file=RIGHT);
-right_button = Button(image=right_image, highlightthickness=0, padx=50, pady=50);
+right_button = Button(image=right_image, highlightthickness=0, padx=50, pady=50,command=pick_random_data);
 
 left_image = PhotoImage(file=WRONG);
-left_button = Button(image=left_image, highlightthickness=0, padx=50, pady=50);
-
+left_button = Button(image=left_image, highlightthickness=0, padx=50, pady=50, command=pick_random_data);
 
 
 ##Element Positioning:
