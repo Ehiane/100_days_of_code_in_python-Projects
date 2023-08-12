@@ -2,6 +2,7 @@
 # %Import(s):
 from tkinter import *
 import random as r;
+import pandas;
 
 # %Global(s):
 BACKGROUND_COLOR = "#B1DDC6"
@@ -11,6 +12,7 @@ RIGHT = "images/right.png";
 WRONG = "images/wrong.png";
 TITLE_FONT = ("Ariel",60,"bold");
 SUB_TITLE_FONT = ("Ariel", 40, "italic");
+SOURCE = "data/igbo_words.csv"
 
 # --------------------- UI SET-UP ------------------------#
 ##Window setup:
@@ -34,10 +36,24 @@ canvas.create_text(400,150, text=f"{foreign_language.capitalize()}", fill="black
 foreign_word = "trouve";
 canvas.create_text(400,263, text=f"{foreign_word}", fill="black", font=TITLE_FONT);
 
-# word_label = Label(text={foreign_word},font=TITLE_FONT);
+def pick_random_data(filename = SOURCE):
+    db = pandas.read_csv(filename);
+    
+    # local_db = db.to_dict(orient='records');
+    # print(local_db);
 
+    ## this works(i prefer this as it's (igbo word) to (english word), rather than igbo(igbo_word) -> english(english word))
+    local_db = {row.Igbo: row.English for (index, row) in db.iterrows()}
 
+    #pick a random pair from local_db; 
+    chosen_pair = r.choice(list(local_db.items())); #returns a tuple.
+    temp_foreign_word, temp_english_word = chosen_pair;
+    
+    return temp_foreign_word, temp_english_word;
+    
+    pass;
 
+pick_random_data();
 
 ##Button(s):
 right_image = PhotoImage(file=RIGHT);
