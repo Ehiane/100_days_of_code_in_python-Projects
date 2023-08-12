@@ -11,13 +11,12 @@ FRONT = "images/card_front.png";
 BACK = "images/card_back.png";
 RIGHT = "images/right.png";
 WRONG = "images/wrong.png";
-TITLE_FONT = ("Ariel",50,"bold");
-TIME_FONT = ("Ariel",20,"bold");
-SUB_TITLE_FONT = ("Ariel", 40, "italic");
+TITLE_FONT = ("Lucida Sans",50,"bold");
+TIME_FONT = ("Lucida Sans",20,"bold");
+SUB_TITLE_FONT = ("Lucida Sans", 40, "italic");
 SOURCE = "data/igbo_words.csv";
 GUESS_TIME = 5;
 Timer = None;
-
 STARTER_WORDS = {
     "chi":"goddess",
     "efulefu": "zero",
@@ -185,14 +184,14 @@ right_image = PhotoImage(file=RIGHT);
 right_button = Button(image=right_image, highlightthickness=0, padx=50, pady=50,command=user_knows);
 left_image = PhotoImage(file=WRONG);
 left_button = Button(image=left_image, highlightthickness=0, padx=50, pady=50, command=user_not_know);
-start_button = Button(text="Start", command=change_card_toBack);
+start_button = Button(text="Start", command=change_card_toBack, bg="yellow",padx=30,pady=30,font=TIME_FONT);
 
 
 ##Element Positioning:
 canvas.grid(row=1, column=0, columnspan=2);
 left_button.grid(row=2, column=0);
 right_button.grid(row=2, column=1);
-start_button.grid(row=3,column=1);
+start_button.place(x=335 ,y=525);
 
 
 
