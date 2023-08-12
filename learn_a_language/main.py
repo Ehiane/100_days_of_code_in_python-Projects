@@ -114,7 +114,6 @@ def change_card_toBack():
     timer();
 
 
-
 def flip_card(filename = SOURCE):
     """
     this will be called after the timer expires.
