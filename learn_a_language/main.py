@@ -77,7 +77,6 @@ def change_card_toFront():
     canvas.itemconfig(display_word, text=f"{base}")
 
 
-
 def change_card_toBack():
     global Timer, current_word_combo;
 
@@ -106,10 +105,12 @@ def flip_card(filename = SOURCE):
     global card,display_language,display_word,base_languange;
     change_card_toFront();
 
+
 def start_timer(time_allowed):
     global Timer
     canvas.itemconfig(timer_text, text=f"0:{time_allowed:02}")
     Timer = window.after(1000, timer, time_allowed)
+
 
 def timer(time_allowed):
     global Timer
@@ -134,6 +135,7 @@ def user_knows():
     save_to_file(filename="data/known_words.csv", dictionary=known_words)
     change_card_toBack()
 
+
 def user_not_know():
     global unknown_words
     foreign, base = current_word_combo
@@ -156,11 +158,6 @@ def save_to_file(filename,dictionary):
     raw_dataFrame = pandas.DataFrame.from_dict(raw_data);
     # converting to csv
     raw_dataFrame.to_csv(filename,index=False);
-
-
-    
-
-
 
 
 ##---------------------------------------------------- UI SET-UP -------------------------------------------------------#
