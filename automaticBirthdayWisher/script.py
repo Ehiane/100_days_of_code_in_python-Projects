@@ -1,8 +1,8 @@
 import smtplib;
 # smtplib.SMTP("smtp.gmail,com",port=587);
 
-my_email = "ehianesocials@gmail.com";
-password_ = "ouyzzwqnznprrghu"
+my_email = "ehianesocials@gmail.com"; #!this email should have the app password activated.
+password_ = "ouyzzwqnznprrghu"  #password gotten from your email provider, (for gmail-> setup app password).
 recepient_email = "ehiane.business@gmail.com";
 connection = smtplib.SMTP("smtp.gmail.com");
 
