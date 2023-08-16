@@ -1,6 +1,8 @@
 import smtplib;
 # smtplib.SMTP("smtp.gmail,com",port=587);
 
+## MESSAGES WITH NO SUBJECT ARE PRIMED AS TARGET FOR SPAM MAILS. 
+
 my_email = "ehianesocials@gmail.com"; #!this email should have the app password activated.
 password_ = "ouyzzwqnznprrghu"  #password gotten from your email provider, (for gmail-> setup app password).
 recepient_email = "ehiane.business@gmail.com";
