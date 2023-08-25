@@ -1,1 +1,1 @@
-company_profit = 11.25
+company_profit = 2.5
