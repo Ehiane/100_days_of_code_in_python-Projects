@@ -34,5 +34,6 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
 
 
 # hi again
+# school stuff started slowing down. 
 
 
