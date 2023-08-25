@@ -30,3 +30,7 @@ recepient_email = "ehiane.business@gmail.com";
 today = dt.datetime.now()
 print("Todays date : ",today);
 
+year = today.year;
+print(f"the year: {year}");
+
+
