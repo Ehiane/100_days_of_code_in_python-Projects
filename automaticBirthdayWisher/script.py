@@ -14,24 +14,32 @@ recepient_email = "ehiane.business@gmail.com";
 
 # # TLS- Transport Layer Security.
 # A better way:
-with smtplib.SMTP("smtp.gmail.com") as connection:
-    connection.starttls(); #basically makes the connection secure.
-    connection.login(user = my_email, password = password_)
-    connection.sendmail(
-        from_addr = my_email, 
-        to_addrs = recepient_email, 
-        msg="Subject:Hello\n\nThis is the body of my mail."
-    );
+# with smtplib.SMTP("smtp.gmail.com") as connection:
+#     connection.starttls(); #basically makes the connection secure.
+#     connection.login(user = my_email, password = password_)
+#     connection.sendmail(
+#         from_addr = my_email, 
+#         to_addrs = recepient_email, 
+#         msg="Subject:Hello\n\nThis is the body of my mail."
+#     );
 
 
 # hi again
 # school stuff started slowing down. 
 
-# today = dt.datetime.now()
-# print("Todays date : ",today);
+today = dt.datetime.now() #type : datetime
+print("Todays date : ",today);
 
-# year = today.year;
-# print(f"the year: {year}");
+year = today.year; #type: int
+print(f"the year: {year}");
 
 # ----------[SAT 9th sept 2023]----------
+# in the datetime string, you can tap into, day, month, year, hour,... ,microsecond
+
+day_of_the_week = today.weekday()
+print( "today is the ",day_of_the_week + 1, "day of the week"); #there's an offset of 1 because 0's the first number in computers.
+
+# when creating a datetime object, the only thing you are required to give is the day, year & month
+date_of_birth = dt.datetime(year=2003, month=7, day= 30);
+print(f"your date of birth is {date_of_birth}")
 
