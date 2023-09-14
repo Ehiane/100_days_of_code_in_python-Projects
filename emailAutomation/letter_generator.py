@@ -1,4 +1,3 @@
-import os
 #Create a letter using starting_letter.txt  ##DONE
 #for each name in invited_names.txt ##DONE
 #Replace the [name] placeholder with the actual name. ##DONE
