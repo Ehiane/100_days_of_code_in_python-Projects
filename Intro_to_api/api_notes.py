@@ -18,7 +18,6 @@ You request smth(provided that you follow the rules) and it sends a response.
 #API endpoints
 think about it as a location. If you wanted to get money out of a bank, 
 you'd need to know what that bank is and what is its address.
-
 that address in API lingo is the API endpoint. It is usually just a url
 
 #API requests
