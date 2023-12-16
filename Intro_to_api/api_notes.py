@@ -33,5 +33,10 @@ Middleware can use an API to accomplish its task. so An Api can also be describe
 
 so get request is a simple api request that usually requires no authentication.
 
+
+#API's can have parameters:
+this returns a specific output based on the parameter provided. 
+
+
 """
 
