@@ -8,9 +8,11 @@ parameters = {
 
 data = None
 try:
-    response = requests.get(API_URL)
+    response = requests.get(API_URL, params= parameters)
     data = response.json()
 except:
     response.raise_for_status()
 
 question_data = data['results']
+print(question_data)
+assert len(question_data) == 10
