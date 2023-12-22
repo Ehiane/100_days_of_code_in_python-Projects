@@ -14,5 +14,5 @@ except:
     response.raise_for_status()
 
 question_data = data['results']
-print(question_data)
-assert len(question_data) == 10
+# print(question_data)
+# assert len(question_data) == 10
