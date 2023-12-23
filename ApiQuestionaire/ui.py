@@ -2,7 +2,7 @@ from tkinter import *
 
 THEME_COLOR = "#375362"
 ALT_COLOR = "#000080"
-FONT = ("Lucida Sans",50,"bold");
+FONT = ("Lucida Sans",15,"bold");
 
 class QuizInterface(Tk):
     def __init__(self) -> None:
@@ -13,14 +13,14 @@ class QuizInterface(Tk):
 
         ## Texts
         self.current_score = 0
-        self.display_score =  Label(text=f'Score: {self.current_score}')
+        self.display_score =  Label(text=f'Score: {self.current_score}', font=FONT, background=THEME_COLOR)
 
         ## Canvas
         self.question_canvas = Canvas(width=300,height=250,bg="#FFFFFF", highlightthickness=0)
 
         ## Images
-        self.true_img = PhotoImage(file="images/true.png")
-        self.false_img = PhotoImage(file="images/true.png")
+        self.true_img = PhotoImage(file="ApiQuestionaire/images/true.png")
+        self.false_img = PhotoImage(file="ApiQuestionaire/images/false.png")
 
         ## Buttons
         self.true_btn = Button(image=self.true_img, highlightthickness=0, padx=50, pady=50, command= ...)
