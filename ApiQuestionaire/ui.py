@@ -50,9 +50,14 @@ class QuizInterface(Tk):
     
     def get_next_question(self):
         self.question_canvas.config(bg="white")
-        self.display_score.config(text=f"Score: {self.quiz.score}")
-        q_text = self.quiz.next_question()
-        self.question_canvas.itemconfig(self.question_text, text=q_text)
+        if self.quiz.still_has_questions:
+            self.display_score.config(text=f"Score: {self.quiz.score}")
+            q_text = self.quiz.next_question()
+            self.question_canvas.itemconfig(self.question_text, text=q_text)
+        else:
+            self.question_canvas.itemconfig(self.question_text, f"You have reached the end of the quiz")
+            self.trigger_true_btn(state="disabled")
+            self.trigger_false_btn(state="disabled")
     
     def trigger_true_btn(self):
         self.give_feedback(self.quiz.check_answer("True"))
