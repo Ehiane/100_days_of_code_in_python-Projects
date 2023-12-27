@@ -48,17 +48,26 @@ class QuizInterface(Tk):
         ## mainloop
         self.window.mainloop()
     
-    def trigger_true_btn(self):
-        user_ans = "True"
-        self.quiz.check_answer(user_answer=user_ans)
-    
-    def trigger_false_btn(self):
-        user_ans = "False"
-        self.quiz.check_answer(user_answer=user_ans)
-    
     def get_next_question(self):
+        self.question_canvas.config(bg="white")
+        self.display_score.config(text=f"Score: {self.quiz.score}")
         q_text = self.quiz.next_question()
         self.question_canvas.itemconfig(self.question_text, text=q_text)
+    
+    def trigger_true_btn(self):
+        self.give_feedback(self.quiz.check_answer("True"))
+    
+    def trigger_false_btn(self):
+        self.give_feedback(self.quiz.check_answer("False"))
+        
+    
+    def give_feedback(self, is_valid):
+        if is_valid: 
+            self.question_canvas.config(bg="green")
+        else:
+            self.question_canvas.config(bg="red")
+        self.window.after(1000, self.get_next_question)
+
 
 
     
