@@ -16,7 +16,7 @@ class QuizInterface(Tk):
         self.window.config(padx=20,pady=20, bg=THEME_COLOR)
 
         ## Texts
-        self.current_score = 0
+        self.current_score = self.quiz.score
         self.display_score =  Label(text=f'Score: {self.current_score}', font=("Lucida Sans",10,"bold"), background=THEME_COLOR, fg="white")
 
         ## Canvas
@@ -49,10 +49,12 @@ class QuizInterface(Tk):
         self.window.mainloop()
     
     def trigger_true_btn(self):
-        return True
+        user_ans = "True"
+        self.quiz.check_answer(user_answer=user_ans)
     
     def trigger_false_btn(self):
-        return False
+        user_ans = "False"
+        self.quiz.check_answer(user_answer=user_ans)
     
     def get_next_question(self):
         q_text = self.quiz.next_question()
