@@ -7,11 +7,11 @@ position = (47.479694, -122.207924) # latitude, longitude
 parameters = {
     'lat': position[0],
     'lon': position[1],
-    'API key': OPEN_WEATHER_API_KEY
+    'appid': OPEN_WEATHER_API_KEY
 }
 
-api_endpoint = f"https://api.openweathermap.org/data/2.5/weather?lat={parameters['lat']}&lon={parameters['lon']}&appid={parameters['API key']}"
-response = requests.get(url=api_endpoint)
+api_endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+response = requests.get(url=api_endpoint, params = parameters)
 try:
     print(f"status code : {response.status_code}")
     api_data = response.json()
