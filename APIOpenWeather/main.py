@@ -22,13 +22,12 @@ except response.status_code != 200:
 
 
 
-# link for weather conditions code: "https://openweathermap.org/weather-conditions"
+# link for weather conditions code(id): "https://openweathermap.org/weather-conditions"
     
 def check_weather_condition(json_weather_data):    
     for each_interval_dict in  json_weather_data['list']:
         if each_interval_dict['weather']:
             inner_dict = each_interval_dict['weather'][0]
-            # print(inner_dict)
             id, brief_description, description = inner_dict['id'] ,inner_dict['main'],inner_dict['description']
             print(f'id: {id}, description: {description}')
             if id < 700: 
