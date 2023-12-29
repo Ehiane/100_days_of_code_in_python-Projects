@@ -1,3 +1,4 @@
+import os
 import requests
 from twilio.rest import Client
 
@@ -6,16 +7,17 @@ from twilio.rest import Client
 # downloaded 'twilio' library
 # saving confidentials as environment variables
 
-TWILIO_RECOVERY_CODE = "37N8MFS6M9XF7L7BD9RYXV8K"
-TWILIO_PHONE_NUMBER = "+18559430941"
-TWILIO_ACCOUNT_SID = "AC1cb54a87eacc507a3575ba70f5d1db55"
-TWILIO_AUTH_TOKEN = "8fbc006476238028e7ce38bb0c114e1c"
+TWILIO_RECOVERY_CODE = os.environ.get('TWILIO_RECOVERY_CODE')
+TWILIO_PHONE_NUMBER = os.environ.get('TWILIO_PHONE_NUMBER')
+TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
 client = Client(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN)
 
 # ---------------------------------------[(OWM)Open Weather Map API part]-----------------------------------
-# to save an environment variable in cmd : 'set <variablename>=<value>'
-# to check environment variables: 'dir ENV:'
-OWM_API_KEY = "8e1d5526f0043ed22ac192a0ab51478e" # got it from registering from the website 
+## to save an environment variable in cmd : 'set <variablename>=<value>' or DO IT MANUALLY, IF IT DOESNT WORK
+## to check environment variables: 'dir ENV:'
+
+OWM_API_KEY = os.environ.get('OWM_API_KEY') # got it from registering from the website 
 OWM_API_ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
 position = (48.173960, -117.017280) # latitude, longitude 
 parameters = {
@@ -34,7 +36,8 @@ except response.status_code != 200:
 
 
 # link for weather conditions code(id): "https://openweathermap.org/weather-conditions"
-def check_weather_condition(json_weather_data):    
+def check_weather_condition(json_weather_data):
+    print('ran')    
     for each_interval in  json_weather_data['list']:
         if isinstance(each_interval['weather'],dict):
             weather_details = each_interval['weather'][0] # 0, because there is always only one element in the list
@@ -63,5 +66,5 @@ def check_weather_condition(json_weather_data):
 def will_rain(weather_code):
     return True if weather_code > 700 else False
 
-
-check_weather_condition(weather_data) # Twilio is experiencing toll free number shutdown as of nov 8 2023. so it is not working
+#! Twilio is experiencing toll free number shutdown as of nov 8 2023. So it is not working.
+check_weather_condition(weather_data) 
