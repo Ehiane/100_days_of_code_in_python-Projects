@@ -1,7 +1,7 @@
 import requests
 import datetime
 from datetime import timedelta
-
+from newsapi import NewsApiClient #had to pip install newsapi-python
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
@@ -86,28 +86,58 @@ def get_price_perctage(data:dict):
 get_price_perctage(stock_data)
 
 
+
+NEWS_API_KEY = "490ba42c82824077a219d3d61987a350"
+# initialization 
+newsapi = NewsApiClient(api_key=NEWS_API_KEY)
+
+
+
+news_params = {
+    'q':  COMPANY_NAME,
+    'from_param': datetime.datetime.now().strftime(r'%Y-%m-%d'),
+    'language':'en'
+}
+
+
 def get_news(diff:float):
-    if diff > 5:
-        ...
+    """
+    5. - If TODO4 percentage is greater than 5 then print("Get News").
+    STEP 2: https://newsapi.org/ 
+    Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
+    6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
+    7. - Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
+    8. - Create a new list of the first 3 article's headline and description using list comprehension.
+
+    """
+    if diff > 5.00:
+        articles = newsapi.get_everything(**news_params)['articles']
+        articles = articles[:3] #top 3 articles
+        assert len(articles) == 3
+        
+        headlines = list(map(lambda x: x['title'],articles))
+        descriptions = list(map(lambda x: x['description'],articles))
+
+        messages = []
+        for i in range(len(articles)):
+            message = f"{COMPANY_NAME}: 🔺{diff}% \nHeadline:{headlines[i]}\nBrief:{descriptions[i]}"
+            messages.append(message)
+
+        print(messages)
+        return messages
 
 
-
-
-
-#TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
-
-    ## STEP 2: https://newsapi.org/ 
-    # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
-
-#TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
-
-#TODO 7. - Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
-
+get_news(5.1)
 
     ## STEP 3: Use twilio.com/docs/sms/quickstart/python
     #to send a separate message with each article's title and description to your phone number. 
 
-#TODO 8. - Create a new list of the first 3 article's headline and description using list comprehension.
+
+
+def send_message(messages):
+    ... #USA toll free Issue
+
+
 
 #TODO 9. - Send each article as a separate message via Twilio. 
 
