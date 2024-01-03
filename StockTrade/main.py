@@ -2,6 +2,8 @@ import requests
 import datetime
 from datetime import timedelta
 from newsapi import NewsApiClient #had to pip install newsapi-python
+import os
+
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
@@ -12,8 +14,7 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 
 
-#TODO: save as environmental varible before pushing
-ALPHAVANTAGE_API_KEY = "UOLN9EF43FIMQQ9T" #stock price stuff 
+ALPHAVANTAGE_API_KEY = os.environ.get("ALPHAVANTAGE_API_KEY") #stock price stuff 
 
 stock_params = {
     'function': 'TIME_SERIES_DAILY',
@@ -87,7 +88,7 @@ get_price_perctage(stock_data)
 
 
 
-NEWS_API_KEY = "490ba42c82824077a219d3d61987a350"
+NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
 # initialization 
 newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 
@@ -95,7 +96,7 @@ newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 
 news_params = {
     'q':  COMPANY_NAME,
-    'from_param': datetime.datetime.now().strftime(r'%Y-%m-%d'),
+    # 'from_param': datetime.datetime.now().strftime(r'%Y-%m-%d'),
     'language':'en'
 }
 
@@ -111,17 +112,21 @@ def get_news(diff:float):
 
     """
     if diff > 5.00:
-        articles = newsapi.get_everything(**news_params)['articles']
-        articles = articles[:3] #top 3 articles
-        assert len(articles) == 3
-        
-        headlines = list(map(lambda x: x['title'],articles))
-        descriptions = list(map(lambda x: x['description'],articles))
+        article_source = newsapi.get_everything(**news_params)
+        if  article_source['totalResults'] > 3 and article_source['status'] == 'ok':
+            articles = article_source['articles']
+            articles = articles[:3] #top 3 articles
+            assert len(articles) == 3
+            
+            headlines = list(map(lambda x: x['title'],articles))
+            descriptions = list(map(lambda x: x['description'],articles))
 
-        messages = []
-        for i in range(len(articles)):
-            message = f"{COMPANY_NAME}: 🔺{diff}% \nHeadline:{headlines[i]}\nBrief:{descriptions[i]}"
-            messages.append(message)
+            messages = []
+            for i in range(len(articles)):
+                message = f"{COMPANY_NAME}: 🔺{diff}% \nHeadline:{headlines[i]}\nBrief:{descriptions[i]}"
+                messages.append(message)
+        else:
+            messages = "No news today"
 
         print(messages)
         return messages
@@ -136,10 +141,6 @@ get_news(5.1)
 
 def send_message(messages):
     ... #USA toll free Issue
-
-
-
-#TODO 9. - Send each article as a separate message via Twilio. 
 
 
 
