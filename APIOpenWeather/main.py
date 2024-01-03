@@ -15,7 +15,7 @@ client = Client(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN)
 
 # ---------------------------------------[(OWM)Open Weather Map API part]-----------------------------------
 ## to save an environment variable in cmd : 'set <variablename>=<value>' or DO IT MANUALLY, IF IT DOESNT WORK
-## to check environment variables: 'dir ENV:'
+## to check environment variables: 'dir ENV:'. Restart vscode if it doesent show up immediatly.
 
 OWM_API_KEY = os.environ.get('OWM_API_KEY') # got it from registering from the website 
 OWM_API_ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
