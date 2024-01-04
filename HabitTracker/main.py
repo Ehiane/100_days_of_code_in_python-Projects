@@ -10,4 +10,6 @@ user_params = {
     # 'thanksCode': ..., #optional
 }
 
-requests.post()
+
+# response = requests.post(url=PIXELA_ENDPOINT, json=user_params)
+# print(response.text)
