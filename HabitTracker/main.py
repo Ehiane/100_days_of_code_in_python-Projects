@@ -1,4 +1,4 @@
-import requests,os
+import requests, os, datetime
 
 USERNAME = 'ehiane'
 TOKEN = os.environ.get("PIXELA_USER_TOKEN")
@@ -39,9 +39,12 @@ headers = {
 ## the result of the graph post:
 MY_GRAPH_URL = f"https://pixe.la/v1/users/ehiane/graphs/ehianegraph1.html" #click this to view my graph
 
+today = datetime.datetime.now().strftime(r'%Y%m%d')
+date = today # to customize date: datetime.datetime(year=..., month=... , day= ...).strftime(r'%Y%m%d')
+
 # a pixel is a cell on the graph
 pixel_params = {
-    'date': '20240104', # has to be in the format yyyyMMdd
+    'date': date, # has to be in the format yyyyMMdd
     'quantity': '1', # since  i specified mine to be in int, it has to be str(int)
 }
 
