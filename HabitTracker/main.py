@@ -31,7 +31,12 @@ headers = {
     'X-USER-TOKEN':TOKEN,
 }
 
-MY_GRAPH_URL = f"https://pixe.la/v1/users/{graph_params['name']}/graphs/{graph_params['id']}.html"
 
-response = requests.post(url=GRAPH_ENDPOINT,json=graph_params, headers= headers)
-print(response.text)
+## Created graph by calling this(don't call it more than once)
+# response = requests.post(url=GRAPH_ENDPOINT,json=graph_params, headers= headers)
+# print(response.text)
+
+## the result:
+MY_GRAPH_URL = f"https://pixe.la/v1/users/ehiane/graphs/ehianegraph1.html" #click this to view my graph
+
+
