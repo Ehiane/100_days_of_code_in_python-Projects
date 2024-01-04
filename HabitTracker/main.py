@@ -20,12 +20,16 @@ user_params = {
 
 GRAPH_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs"
 graph_params = {
-    'id':...,
-    'name':...,
-    'unit':...,
-    'type':...,
-    'color':...,
+    'id':"ehianeGraph1",
+    'name':"Coding Graph",
+    'unit':"hour",
+    'type':"int",
+    'color':"ajisai",
 }
 
-requests.post()
+headers = {
+    'X-USER-TOKEN':TOKEN,
+}
+
+requests.post(url=GRAPH_ENDPOINT,json=graph_params, headers= headers)
 
