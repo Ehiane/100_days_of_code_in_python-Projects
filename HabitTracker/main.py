@@ -20,7 +20,7 @@ user_params = {
 
 GRAPH_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs"
 graph_params = {
-    'id':"ehianeGraph1",
+    'id':"ehianegraph1",
     'name':"Coding Graph",
     'unit':"hour",
     'type':"int",
@@ -31,5 +31,7 @@ headers = {
     'X-USER-TOKEN':TOKEN,
 }
 
-requests.post(url=GRAPH_ENDPOINT,json=graph_params, headers= headers)
+MY_GRAPH_URL = f"https://pixe.la/v1/users/{graph_params['name']}/graphs/{graph_params['id']}.html"
 
+response = requests.post(url=GRAPH_ENDPOINT,json=graph_params, headers= headers)
+print(response.text)
