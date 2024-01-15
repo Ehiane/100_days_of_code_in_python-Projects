@@ -1,7 +1,7 @@
 import os, requests, datetime, pytz
-# pytz - timezone
+# pytz used for timezones
 
-## OUTPUT: https://docs.google.com/spreadsheets/d/1et4lJuoWkZfeDYQ2c95g9vry4qeHUGPlimMSXVAU1DE/edit#gid=512663232
+## find result here: https://docs.google.com/spreadsheets/d/1et4lJuoWkZfeDYQ2c95g9vry4qeHUGPlimMSXVAU1DE/edit#gid=512663232
 
 # ------------------------------------------[Nutritionix Setup]--------------------------------------------------------------
 """
@@ -114,8 +114,24 @@ workout_row = {
 }
 
 sheety_response = requests.post(url=SHEETY_API_ENDPOINT,json=workout_row,headers=sheety_auth_headers)
-
 try:
     print(sheety_response.json())
 except sheety_response.raise_for_status():
     print(sheety_response.status_code)
+
+
+# ------------------------------------------[Resources]--------------------------------------------------------------
+"""
+Here is a list of all the crucial resources used for the development of this mini-project.
+"""
+RESOURCES = {
+    # sheety - spreadsheet API
+    'sheetyDashboard': 'https://dashboard.sheety.co/projects/65a4c2caec339004d7c57fb0/auth',
+    'sheetyRequestsDocumentation': 'https://sheety.co/docs/requests.html',
+    'sheetyAPIDocumentaion': 'https://dashboard.sheety.co/projects/65a4c2caec339004d7c57fb0/sheets/workouts',
+    
+    # nutirionix - natural Language for excerice (ChatGPT of Excerices)
+    'nutritionixDocumentation': 'https://developer.syndigo.com/docs/nutritionix-api-guide',
+    'nutritionixAccountDetails': 'https://developer.nutritionix.com/admin/access_details',
+    'nutriionixNaturalLanguageForExcerciseDocumentation': 'https://developer.syndigo.com/docs/natural-language-for-exercise'
+}
