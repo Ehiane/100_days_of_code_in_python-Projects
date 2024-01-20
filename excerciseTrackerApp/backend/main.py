@@ -19,7 +19,6 @@ nutritionix_headers = {
     "x-app-id": NUTRIRIONIX_APP_ID,
     "x-app-key": NUTRIRIONIX_API_KEY,
 }
-
 user_query = input("What exercises did you do? :")
 nutrionix_parameters = {
     "query": user_query,
